@@ -3,7 +3,7 @@ import sys
 from copy import deepcopy
 from export import ParseLammpsData, ExportLammpsData, ExportLammpsDump
 from network import EMPTY, H_MASS, c_atom, c_bead_bond, c_bead_angle, c_bead, c_group, print_net_stats
-from process import EnumerateTypes
+from process import EnumerateTypes, GenBond
 
 
 n_sysargv = len(sys.argv)
@@ -139,32 +139,11 @@ for group in network:
    molId += 1
    print_net_stats(group)
 
-bead_bonds = []
-bead_bondId = 1
-n_beadbonds = 0
+
 print("-----------------------------------------------")
 print("Generating bonds between beads")
 print("-----------------------------------------------")
-for group in network:
-   for bond in group.bonds:
-
-      aux = "_".join(sorted([bond[0].type,bond[1].type]))
-      try:
-         type = num_of_bond_type[ aux ]
-      except:
-         print("Unidentified bond type: " + aux)
-         exit()
-
-      i = bond[0].bId
-      j = bond[1].bId
-      itype = bond[0].type
-      jtype = bond[1].type
-
-      ibond = c_bead_bond(bead_bondId,type,i,j,itype,jtype)
-      bead_bonds.append(ibond)
-      bead_bondId += 1
-      n_beadbonds += 1
-
+bead_bonds = GenBond(network, num_of_bond_type)
 
 print("-----------------------------------------------")
 print("Generating angles between subsequent beads")
