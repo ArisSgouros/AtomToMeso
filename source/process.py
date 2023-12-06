@@ -23,6 +23,8 @@ def EnumerateTypes(bead_types, bond_pairs, angle_pairs):
    id = 1
    num_of_type = {}
    for bead in bead_types:
+      if bead.type in num_of_type:
+         continue
       num_of_type[bead.type] = id
       id += 1
 
