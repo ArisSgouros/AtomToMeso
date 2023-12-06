@@ -4,7 +4,7 @@ sys.path.insert(0, '../../source/')
 
 from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
-from network import EMPTY, H_MASS, c_atom, c_bead_bond, c_bead_angle, c_bead, c_group, print_net_stats
+from network import EMPTY, H_MASS, Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat
 from process import Process
 
 if __name__ == "__main__":
@@ -27,18 +27,18 @@ if __name__ == "__main__":
 
    # Create the bead objects
    # SPE beads
-   bSB = c_bead("SB",aLocIds["SB"],1)
+   bSB = Bead("SB",aLocIds["SB"],1)
    bSB.set_ahead(1)
    bSB.set_atail(41)
-   bSO = c_bead("SO",aLocIds["SO"],2)
-   bSN = c_bead("SN",aLocIds["SN"],3)
-   bSS = c_bead("SS",aLocIds["SS"],4)
+   bSO = Bead("SO",aLocIds["SO"],2)
+   bSN = Bead("SN",aLocIds["SN"],3)
+   bSS = Bead("SS",aLocIds["SS"],4)
 
    # WATER bead
-   bW = c_bead("W",aLocIds["W"],1)
+   bW = Bead("W",aLocIds["W"],1)
 
    # Create SPE group (repeat unit)
-   gSPE = c_group("SPE")
+   gSPE = Group("SPE")
    gSPE.add_bead( bSB )
    gSPE.add_bead( bSO )
    gSPE.add_bead( bSN )
@@ -50,7 +50,7 @@ if __name__ == "__main__":
    gSPE.set_btail(bSB)
 
    # Create the water group
-   gW = c_group("W")
+   gW = Group("W")
    gW.add_bead(bW)
 
    # Generate chains by merging groups
@@ -70,7 +70,7 @@ if __name__ == "__main__":
    print("Base group stats")
    print("-----------------------------------------------")
    for group in groups:
-      print_net_stats(group)
+      PrintNetStat(group)
    print()
 
    # Define the bond types

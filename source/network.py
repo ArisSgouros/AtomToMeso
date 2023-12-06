@@ -5,7 +5,7 @@ from copy import deepcopy
 EMPTY = "empty"
 H_MASS = 1.008
 
-class c_atom:
+class Atom:
    def __init__(self):
       self.Id = EMPTY
       self.molId = EMPTY
@@ -15,7 +15,7 @@ class c_atom:
       self.y = ""
       self.z = ""
 
-class c_bead_bond:
+class BeadBond:
    def __init__(self, Id, type, i, j, itype, jtype):
       self.Id = Id
       self.type = type
@@ -24,7 +24,7 @@ class c_bead_bond:
       self.itype = itype
       self.jtype = jtype
 
-class c_bead_angle:
+class BeadAngle:
    def __init__(self, Id, type, i, j, k, itype, jtype, ktype):
       self.Id = Id
       self.type = type
@@ -35,7 +35,7 @@ class c_bead_angle:
       self.jtype = jtype
       self.ktype = ktype
 
-class c_bead():
+class Bead():
    def __init__(self, type, aIds, bId):
       self.type = type
       self.molId = EMPTY
@@ -64,7 +64,7 @@ class c_bead():
       if self.atail != EMPTY:
          self.atail += shift
 
-class c_group():
+class Group():
    def __init__(self, type):
       self.type = type
 
@@ -104,7 +104,7 @@ class c_group():
    # merge groups
    def __add__(self, new_group):
 
-      # generate a deepcopy because c_group is imutable
+      # generate a deepcopy because Group is imutable
       right_group = deepcopy(new_group)
       left_group = deepcopy(self)
 
@@ -163,7 +163,7 @@ class c_group():
       return left_group
 
 
-def print_net_stats(group):
+def PrintNetStat(group):
    print('---',group.type,'---')
    print("nbeads: ", group.nbead)
    print("bIds type ahead atail aIds")

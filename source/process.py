@@ -1,6 +1,6 @@
 import sys
 
-from network import c_bead_bond, c_bead_angle, print_net_stats
+from network import BeadBond, BeadAngle, PrintNetStat
 from export import ParseLammpsData
 
 def GenGlobalId(network, verbose):
@@ -16,7 +16,7 @@ def GenGlobalId(network, verbose):
       gaId += group.nat
       molId += 1
       if verbose:
-         print_net_stats(group)
+         PrintNetStat(group)
 
 def EnumerateTypes(aLocIds, bond_pairs, angle_pairs):
    # Enumerate bead types
@@ -76,7 +76,7 @@ def GenBond(network, num_of_bond_type):
          itype = bond[0].type
          jtype = bond[1].type
 
-         ibond = c_bead_bond(bead_bondId,type,i,j,itype,jtype)
+         ibond = BeadBond(bead_bondId,type,i,j,itype,jtype)
          bead_bonds.append(ibond)
          bead_bondId += 1
          n_beadbonds += 1
@@ -128,7 +128,7 @@ def GenAngle(network, num_of_angle_type, bead_bonds):
                print("Unidentified angle type: " + aux_type)
              #  exit()
 
-            iangle = c_bead_angle(angle_id, type, angle_ids[0], angle_ids[1], angle_ids[2], angle_types[0], angle_types[1], angle_types[2])
+            iangle = BeadAngle(angle_id, type, angle_ids[0], angle_ids[1], angle_ids[2], angle_types[0], angle_types[1], angle_types[2])
             bead_angles.append(iangle)
 
 
@@ -137,7 +137,7 @@ def GenAngle(network, num_of_angle_type, bead_bonds):
 
    return bead_angles
 
-def Process(aLocIds, bond_pairs, angle_pairs, network, LAMMPS_DATA_INPUT, atom_type, verbose):
+def Process(aLocIds, bond_pairs, angle_pairs, network, path_lammps_data_in, atom_type, verbose):
 
    num_of_type, num_of_bond_type, num_of_angle_type = EnumerateTypes(aLocIds, bond_pairs, angle_pairs)
 
@@ -161,10 +161,10 @@ def Process(aLocIds, bond_pairs, angle_pairs, network, LAMMPS_DATA_INPUT, atom_t
    print("Generating coarse grained LAMMPS DATA FILE"     )
    print("-----------------------------------------------")
    print()
-   print("Parsing lammps data file: ",LAMMPS_DATA_INPUT)
+   print("Parsing lammps data file: ",path_lammps_data_in)
    print()
 
-   box, mass_of_type, atom_list, network, mass_of_bead, network = ParseLammpsData(LAMMPS_DATA_INPUT, network, atom_type)
+   box, mass_of_type, atom_list, network, mass_of_bead, network = ParseLammpsData(path_lammps_data_in, network, atom_type)
 
    return network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type
 

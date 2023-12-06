@@ -1,5 +1,5 @@
 from copy import deepcopy
-from network import EMPTY, H_MASS, c_atom
+from network import EMPTY, H_MASS, Atom
 
 def GetDumpFormat(filename):
    col = {}
@@ -38,7 +38,7 @@ def GetDumpFormat(filename):
       sys.exit()
    return col
 
-def ParseLammpsData(LAMMPS_DATA_INPUT, network, atomtype):
+def ParseLammpsData(path_lammps_data_in, network, atomtype):
 
    # Deal with the format of the Lammps data file
    if atomtype == 'full':
@@ -64,7 +64,7 @@ def ParseLammpsData(LAMMPS_DATA_INPUT, network, atomtype):
 
    n_atoms = 0
    box = {}
-   g = open(LAMMPS_DATA_INPUT, 'r')
+   g = open(path_lammps_data_in, 'r')
 
 
    lines = []
@@ -129,7 +129,7 @@ def ParseLammpsData(LAMMPS_DATA_INPUT, network, atomtype):
    for ii in range(n_atoms):
       line_split = lines[Atoms_start + ii].split()
 
-      iat = c_atom()
+      iat = Atom()
       iat.Id    = int(  line_split[DATA_COL_ID])
       iat.molId = int(  line_split[DATA_COL_MOLID])
       iat.type  = int(  line_split[DATA_COL_TYPE])
@@ -271,7 +271,7 @@ def ExportLammpsData(filename, network, bead_bonds, bead_angles, mass_of_bead, n
 
 
 
-def ExportLammpsDump(path_dump_in, path_dump_out, N_FRAME, EV_FRAME, network, mass_of_type, num_of_type):
+def ExportLammpsDump(path_dump_in, path_dump_out, n_frame, EV_FRAME, network, mass_of_type, num_of_type):
    dump_col = GetDumpFormat(path_dump_in)
 
    DUMP_COL_ID = dump_col['id']
@@ -295,10 +295,10 @@ def ExportLammpsDump(path_dump_in, path_dump_out, N_FRAME, EV_FRAME, network, ma
 
       iframe += 1
 
-      if N_FRAME != "MAX":
-         if (iframe > 10 and iframe % int(N_FRAME / 10.0) == 0):
+      if n_frame != "MAX":
+         if (iframe > 10 and iframe % int(n_frame / 10.0) == 0):
             print(iframe)
-         if iframe == N_FRAME:
+         if iframe == n_frame:
             break
 
       if (iframe % EV_FRAME != 0):
@@ -333,7 +333,7 @@ def ExportLammpsDump(path_dump_in, path_dump_out, N_FRAME, EV_FRAME, network, ma
       atom_list = {}
       for ii in range(n_atoms):
          line_split = fin.readline().split()
-         iat = c_atom()
+         iat = Atom()
          iat.Id    = int(  line_split[DUMP_COL_ID])
          iat.molId = int(  line_split[DUMP_COL_MOLID])
          iat.type  = int(  line_split[DUMP_COL_TYPE])
