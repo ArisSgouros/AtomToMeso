@@ -58,20 +58,12 @@ if __name__ == "__main__":
    network.append(deepcopy(S8))
 
    # Print info regarding each group
-   groups = [gSPE, gW]
-
    print("-----------------------------------------------")
    print("Base group stats")
    print("-----------------------------------------------")
-   for group in groups:
+   for group in [gSPE, gW]:
       PrintNetStat(group)
    print()
-
-   # Define the bond types
-   bond_pairs = [ ["SB","SB"], ["SO","SB"], ["SO","SN"], ["SN","SS"] ]
-
-   # Define the angle types
-   angle_pairs = [ ["SB","SB","SB"], ["SB","SB","SO"], ["SB","SO","SN"], ["SO","SN","SS"] ]
 
    # Report IDs assigned to beads
    print("-----------------------------------------------")
@@ -82,7 +74,7 @@ if __name__ == "__main__":
       print(bead.type, len(bead.aIds), bead.aIds)
    print()
 
-   network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type = Process(bead_types, bond_pairs, angle_pairs, network, path_lammps_data_in, atomtype, verbose)
+   network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type = Process(network, path_lammps_data_in, atomtype, verbose)
 
    print("-----------------------------------------------")
    print("Generating the new lammps datafile with name " + path_lammps_data_out + "..")

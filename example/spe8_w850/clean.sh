@@ -1,2 +1,2 @@
 #!/bin/bash
-rm CG.* o.*
+rm o.*
