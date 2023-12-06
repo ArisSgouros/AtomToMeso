@@ -18,68 +18,48 @@ def GenGlobalId(network, verbose):
       if verbose:
          PrintNetStat(group)
 
-def EnumerateTypes(bead_types, bond_pairs, angle_pairs):
-   # Enumerate bead types
-   id = 1
+def EnumerateTypes(network):
+   itype_max = 0
    num_of_type = {}
-   for bead in bead_types:
-      if bead.type in num_of_type:
-         continue
-      num_of_type[bead.type] = id
-      id += 1
+   for group in network:
+      for bead in group.beads.values():
+         aux = bead.type
+         if not aux in num_of_type:
+            itype_max += 1
+            num_of_type[aux] = itype_max
+   return num_of_type
 
-   # Enumerate the bond types
-   num_of_bond_type = {}
-   id = 1
-   for bond_pair in bond_pairs:
-      if bond_pair[0] > bond_pair[-1]:
-         bond_pair.reverse()
-      aux = "_".join(bond_pair)
-      num_of_bond_type[aux] = id
-      id += 1
-
-   # Enumerate the angle types
-   num_of_angle_type = {}
-   id = 1
-   for angle_pair in angle_pairs:
-      if angle_pair[0] > angle_pair[-1]:
-         angle_pair.reverse()
-      aux = "_".join(angle_pair)
-      num_of_angle_type[aux] = id
-      id += 1
-
-   return num_of_type, num_of_bond_type, num_of_angle_type
-
-def GenBond(network, num_of_bond_type):
+def GenBond(network):
    bead_bonds = []
-   bead_bondId = 1
-   n_beadbonds = 0
+   bondId = 1
+   btype_max = 0
+   num_of_bond_type = {}
    for group in network:
       for bond in group.bonds:
 
          aux = "_".join(sorted([bond[0].type,bond[1].type]))
-         try:
-            type = num_of_bond_type[ aux ]
-         except:
-            type = 0
-            print("Unidentified bond type: " + aux)
+         if not aux in num_of_bond_type:
+            btype_max += 1
+            num_of_bond_type[aux] = btype_max
+         type = num_of_bond_type[ aux ]
 
          i = bond[0].bId
          j = bond[1].bId
          itype = bond[0].type
          jtype = bond[1].type
 
-         ibond = BeadBond(bead_bondId,type,i,j,itype,jtype)
+         ibond = BeadBond(bondId,type,i,j,itype,jtype)
          bead_bonds.append(ibond)
-         bead_bondId += 1
-         n_beadbonds += 1
-   return bead_bonds
+         bondId += 1
+   return bead_bonds, num_of_bond_type
 
-def GenAngle(network, num_of_angle_type, bead_bonds):
+def GenAngle(network, bead_bonds):
    bead_angles = []
-   n_beadangles = 0
 
    all_angle_ids = []
+
+   atype_max = 0
+   num_of_angle_type = {}
 
    angle_id = 1
    for abond in bead_bonds:
@@ -114,41 +94,37 @@ def GenAngle(network, num_of_angle_type, bead_bonds):
                aux_type.reverse()
 
             aux_type = "_".join(aux_type)
-
-            try:
-               type = num_of_angle_type[ aux_type ]
-            except:
-               type = 0
-               print("Unidentified angle type: " + aux_type)
+            if not aux_type in num_of_angle_type:
+               atype_max += 1
+               num_of_angle_type[aux_type] = atype_max
+            type = num_of_angle_type[ aux_type ]
 
             iangle = BeadAngle(angle_id, type, angle_ids[0], angle_ids[1], angle_ids[2], angle_types[0], angle_types[1], angle_types[2])
             bead_angles.append(iangle)
 
 
             angle_id += 1
-            n_beadangles += 1
 
-   return bead_angles
+   return bead_angles, num_of_angle_type
 
-def Process(bead_types, bond_pairs, angle_pairs, network, path_lammps_data_in, atom_type, verbose):
+def Process(network, path_lammps_data_in, atom_type, verbose):
 
-   num_of_type, num_of_bond_type, num_of_angle_type = EnumerateTypes(bead_types, bond_pairs, angle_pairs)
+   num_of_type = EnumerateTypes(network)
 
    print("-----------------------------------------------")
    print("Generating global IDs & Network stats..")
    print("-----------------------------------------------")
    GenGlobalId(network, verbose)
 
-
    print("-----------------------------------------------")
    print("Generating bonds between beads")
    print("-----------------------------------------------")
-   bead_bonds = GenBond(network, num_of_bond_type)
+   bead_bonds, num_of_bond_type = GenBond(network)
 
    print("-----------------------------------------------")
    print("Generating angles between subsequent beads")
    print("-----------------------------------------------")
-   bead_angles = GenAngle(network, num_of_angle_type, bead_bonds)
+   bead_angles, num_of_angle_type = GenAngle(network, bead_bonds)
 
    print("-----------------------------------------------")
    print("Generating coarse grained LAMMPS DATA FILE"     )
