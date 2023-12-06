@@ -1,15 +1,5 @@
 from copy import deepcopy
-
-EMPTY = "empty"
-class c_atom:
-   def __init__(self):
-      self.Id = EMPTY
-      self.molId = EMPTY
-      self.type = EMPTY
-      self.q = ""
-      self.x = ""
-      self.y = ""
-      self.z = ""
+from network import EMPTY, c_atom
 
 def ExportLammpsData(filename, network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box):
    f = open(filename, 'w')
