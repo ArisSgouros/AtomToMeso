@@ -1,6 +1,21 @@
 import sys
 
-from network import c_bead_bond, c_bead_angle
+from network import c_bead_bond, c_bead_angle, print_net_stats
+
+def GenGlobalId(network, verbose):
+   gbId = 0
+   gaId = 0
+   molId = 1
+   for group in network:
+      group.shift_lids(gbId)
+      for bead in group.beads.values():
+         bead.shift_aIds(gaId)
+         bead.molId = molId
+      gbId += group.nbead
+      gaId += group.nat
+      molId += 1
+      if verbose:
+         print_net_stats(group)
 
 def EnumerateTypes(aLocIds, bond_pairs, angle_pairs):
    # Enumerate bead types

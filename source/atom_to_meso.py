@@ -3,8 +3,7 @@ import sys
 from copy import deepcopy
 from export import ParseLammpsData, ExportLammpsData, ExportLammpsDump
 from network import EMPTY, H_MASS, c_atom, c_bead_bond, c_bead_angle, c_bead, c_group, print_net_stats
-from process import EnumerateTypes, GenBond, GenAngle
-
+from process import EnumerateTypes, GenBond, GenAngle, GenGlobalId
 
 n_sysargv = len(sys.argv)
 if n_sysargv != 2 and n_sysargv != 5:
@@ -26,6 +25,7 @@ if n_sysargv != 2 and n_sysargv != 5:
 
 LAMMPS_DATA_INPUT = sys.argv[1]
 LAMMPS_DATA_OUTPUT = "o.cg.dat"
+verbose = True
 
 if n_sysargv == 5:
    LAMMPS_DUMP_INPUT = sys.argv[2]
@@ -95,10 +95,6 @@ bond_pairs = [ ["SB","SB"], ["SO","SB"], ["SO","SN"], ["SN","SS"] ]
 # Define the angle types
 angle_pairs = [ ["SB","SB","SB"], ["SB","SB","SO"], ["SB","SO","SN"], ["SO","SN","SS"] ]
 
-########################################
-# Internal Section
-########################################
-
 # Report IDs assigned to beads
 print("-----------------------------------------------")
 print("Local IDs of beads")
@@ -126,18 +122,7 @@ print()
 print("-----------------------------------------------")
 print("Generating global IDs & Network stats..")
 print("-----------------------------------------------")
-gbId = 0
-gaId = 0
-molId = 1
-for group in network:
-   group.shift_lids(gbId)
-   for bead in group.beads.values():
-      bead.shift_aIds(gaId)
-      bead.molId = molId
-   gbId += group.nbead
-   gaId += group.nat
-   molId += 1
-   print_net_stats(group)
+GenGlobalId(network, verbose)
 
 
 print("-----------------------------------------------")
