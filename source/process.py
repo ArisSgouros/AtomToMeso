@@ -1,6 +1,7 @@
 import sys
 
 from network import c_bead_bond, c_bead_angle, print_net_stats
+from export import ParseLammpsData
 
 def GenGlobalId(network, verbose):
    gbId = 0
@@ -135,3 +136,37 @@ def GenAngle(network, num_of_angle_type, bead_bonds):
             n_beadangles += 1
 
    return bead_angles
+
+def Process(aLocIds, bond_pairs, angle_pairs, network, LAMMPS_DATA_INPUT, data_col, verbose):
+
+   num_of_type, num_of_bond_type, num_of_angle_type = EnumerateTypes(aLocIds, bond_pairs, angle_pairs)
+
+   print("-----------------------------------------------")
+   print("Generating global IDs & Network stats..")
+   print("-----------------------------------------------")
+   GenGlobalId(network, verbose)
+
+
+   print("-----------------------------------------------")
+   print("Generating bonds between beads")
+   print("-----------------------------------------------")
+   bead_bonds = GenBond(network, num_of_bond_type)
+
+   print("-----------------------------------------------")
+   print("Generating angles between subsequent beads")
+   print("-----------------------------------------------")
+   bead_angles = GenAngle(network, num_of_angle_type, bead_bonds)
+
+   print("-----------------------------------------------")
+   print("Generating coarse grained LAMMPS DATA FILE"     )
+   print("-----------------------------------------------")
+   print()
+   print("Parsing lammps data file: ",LAMMPS_DATA_INPUT)
+   print()
+
+   box, mass_of_type, atom_list, network, mass_of_bead, network = ParseLammpsData(LAMMPS_DATA_INPUT, network, data_col)
+
+   return network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type
+
+
+

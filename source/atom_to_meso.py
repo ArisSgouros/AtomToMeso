@@ -1,9 +1,9 @@
 import sys
 
 from copy import deepcopy
-from export import ParseLammpsData, ExportLammpsData, ExportLammpsDump
+from export import ExportLammpsData, ExportLammpsDump
 from network import EMPTY, H_MASS, c_atom, c_bead_bond, c_bead_angle, c_bead, c_group, print_net_stats
-from process import EnumerateTypes, GenBond, GenAngle, GenGlobalId
+from process import Process
 
 n_sysargv = len(sys.argv)
 if n_sysargv != 2 and n_sysargv != 5:
@@ -89,6 +89,16 @@ for ii in range(850):
    network.append(deepcopy(gW))
 network.append(deepcopy(S8))
 
+# Print info regarding each group
+groups = [gSPE, gW]
+
+print("-----------------------------------------------")
+print("Base group stats")
+print("-----------------------------------------------")
+for group in groups:
+   print_net_stats(group)
+print()
+
 # Define the bond types
 bond_pairs = [ ["SB","SB"], ["SO","SB"], ["SO","SN"], ["SN","SS"] ]
 
@@ -104,47 +114,7 @@ for key in aLocIds:
    print(key, len(aLocIds[key]), aLocIds[key])
 print()
 
-num_of_type, num_of_bond_type, num_of_angle_type = EnumerateTypes(aLocIds, bond_pairs, angle_pairs)
-
-
-
-# Print info regarding each group
-groups = [gSPE, gW]
-
-print("-----------------------------------------------")
-print("Base group stats")
-print("-----------------------------------------------")
-for group in groups:
-   print_net_stats(group)
-print()
-
-
-print("-----------------------------------------------")
-print("Generating global IDs & Network stats..")
-print("-----------------------------------------------")
-GenGlobalId(network, verbose)
-
-
-print("-----------------------------------------------")
-print("Generating bonds between beads")
-print("-----------------------------------------------")
-bead_bonds = GenBond(network, num_of_bond_type)
-
-print("-----------------------------------------------")
-print("Generating angles between subsequent beads")
-print("-----------------------------------------------")
-bead_angles = GenAngle(network, num_of_angle_type, bead_bonds)
-
-print("-----------------------------------------------")
-print("Generating coarse grained LAMMPS DATA FILE"     )
-print("-----------------------------------------------")
-print()
-print("Parsing lammps data file: ",LAMMPS_DATA_INPUT)
-print()
-
-box, mass_of_type, atom_list, network, mass_of_bead, network = ParseLammpsData(LAMMPS_DATA_INPUT, network, data_col)
-
-
+network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type = Process(aLocIds, bond_pairs, angle_pairs, network, LAMMPS_DATA_INPUT, data_col, verbose)
 
 print("-----------------------------------------------")
 print("Generating the new lammps datafile with name " + LAMMPS_DATA_OUTPUT + "..")
