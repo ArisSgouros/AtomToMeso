@@ -7,43 +7,14 @@ from export import ExportLammpsData, ExportLammpsDump
 from network import EMPTY, H_MASS, c_atom, c_bead_bond, c_bead_angle, c_bead, c_group, print_net_stats
 from process import Process
 
-n_sysargv = len(sys.argv)
-if n_sysargv != 2 and n_sysargv != 5:
-   print
-   print ("The required formats are the following:")
-   print
-   print ("python atom_to_meso.py \"LAMMPS_DATA_INPUT\" ")
-   print
-   print ("example: python atom_to_meso.py SVSV-W800.dat")
-   print
-   print ("or")
-   print
-   print ("python atom_to_meso.py \"LAMMPS_DATA_INPUT\" \"LAMMPS_DUMP_INPUT\" \"N_FRAME\" \"EV_FRAME\"")
-   print ("example 1: python atom_to_meso.py SS-W800.dat 1_prod.lammpstrj MAX 5")
-   print ("example 2: python atom_to_meso.py SS-W800.dat 1_prod.lammpstrj 30 10")
-   print
-   print ("exiting..")
-   sys.exit()
-
-LAMMPS_DATA_INPUT = sys.argv[1]
+LAMMPS_DATA_INPUT = "spe8_w850.data"
+LAMMPS_DUMP_INPUT = "spe8_w850_0.lammpstrj"
 LAMMPS_DATA_OUTPUT = "o.cg.dat"
+LAMMPS_DUMP_OUTPUT = "o.cg.lammpstrj"
 verbose = True
-
-if n_sysargv == 5:
-   LAMMPS_DUMP_INPUT = sys.argv[2]
-
-   N_FRAME = sys.argv[3]
-   if N_FRAME != "MAX":
-      N_FRAME = int(sys.argv[3])
-
-   EV_FRAME = int(sys.argv[4])
-
-   LAMMPS_DUMP_OUTPUT = "o.cg.lammpstrj"
-
-# Set the format of Lammps data file
-
+N_FRAME = 40
+EV_FRAME = 1
 atomtype = 'full'
-
 
 # Set the local ids for each segment represented by a bead
 aLocIds={}
@@ -124,10 +95,7 @@ print("-----------------------------------------------")
 ExportLammpsData(LAMMPS_DATA_OUTPUT, network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box)
 print("SUCCESS!")
 
-
-
-if n_sysargv == 5:
-   print("-----------------------------------------------")
-   print("Generating the new lammps dump with name " + LAMMPS_DUMP_OUTPUT + "..")
-   print("-----------------------------------------------")
-   ExportLammpsDump(LAMMPS_DUMP_INPUT, LAMMPS_DUMP_OUTPUT, N_FRAME, EV_FRAME, network, mass_of_type, num_of_type)
+print("-----------------------------------------------")
+print("Generating the new lammps dump with name " + LAMMPS_DUMP_OUTPUT + "..")
+print("-----------------------------------------------")
+ExportLammpsDump(LAMMPS_DUMP_INPUT, LAMMPS_DUMP_OUTPUT, N_FRAME, EV_FRAME, network, mass_of_type, num_of_type)
