@@ -3,7 +3,7 @@ import sys
 from copy import deepcopy
 from export import ParseLammpsData, ExportLammpsData, ExportLammpsDump
 from network import EMPTY, H_MASS, c_atom, c_bead_bond, c_bead_angle, c_bead, c_group, print_net_stats
-from process import EnumerateTypes, GenBond
+from process import EnumerateTypes, GenBond, GenAngle
 
 
 n_sysargv = len(sys.argv)
@@ -148,58 +148,7 @@ bead_bonds = GenBond(network, num_of_bond_type)
 print("-----------------------------------------------")
 print("Generating angles between subsequent beads")
 print("-----------------------------------------------")
-bead_angles = []
-n_beadangles = 0
-
-all_angle_ids = []
-
-angle_id = 1
-for abond in bead_bonds:
-   for bbond in bead_bonds:
-      if abond is bbond: continue
-
-      angle_ids = []
-      if abond.i is bbond.i:
-         angle_ids = [abond.j, abond.i, bbond.j]
-         angle_types = [abond.jtype, abond.itype, bbond.jtype]
-      if abond.i is bbond.j:
-         angle_ids = [abond.j, abond.i, bbond.i]
-         angle_types = [abond.jtype, abond.itype, bbond.itype]
-      if abond.j is bbond.i:
-         angle_ids = [abond.i, abond.j, bbond.j]
-         angle_types = [abond.itype, abond.jtype, bbond.jtype]
-      if abond.j is bbond.j:
-         angle_ids = [abond.i, abond.j, bbond.i]
-         angle_types = [abond.itype, abond.jtype, bbond.itype]
-
-      if angle_ids:
-         # Check if the angle already exists
-         aux_sort_ids = sorted(angle_ids)
-         if aux_sort_ids in all_angle_ids:
-            continue
-         else:
-            all_angle_ids.append(aux_sort_ids)
-
-         # Sort the first and last types for them to be unique
-         aux_type = [ii for ii in angle_types]
-         if aux_type[0] > aux_type[-1]:
-            aux_type.reverse()
-
-         aux_type = "_".join(aux_type)
-
-         try:
-            type = num_of_angle_type[ aux_type ]
-         except:
-            print("Unidentified angle type: " + aux_type)
-          #  exit()
-
-         iangle = c_bead_angle(angle_id, type, angle_ids[0], angle_ids[1], angle_ids[2], angle_types[0], angle_types[1], angle_types[2])
-         bead_angles.append(iangle)
-
-
-         angle_id += 1
-         n_beadangles += 1
-
+bead_angles = GenAngle(network, num_of_angle_type, bead_bonds)
 
 print("-----------------------------------------------")
 print("Generating coarse grained LAMMPS DATA FILE"     )
