@@ -38,8 +38,7 @@ if n_sysargv == 5:
 
    LAMMPS_DUMP_OUTPUT = "o.cg.lammpstrj"
 
-# Set the format of Lammps data and dump files
-dump_col = {'id': 0, 'molid': 1, 'type': 2, 'x': 3, 'y': 4, 'z': 5}
+# Set the format of Lammps data file
 data_col = {'id': 0, 'molid': 1, 'type': 2, 'q': 3, 'x':4, 'y':5, 'z':6, 'ix':7, 'iy':8, 'iz':9}
 
 
@@ -128,4 +127,4 @@ if n_sysargv == 5:
    print("-----------------------------------------------")
    print("Generating the new lammps dump with name " + LAMMPS_DUMP_OUTPUT + "..")
    print("-----------------------------------------------")
-   ExportLammpsDump(LAMMPS_DUMP_INPUT, LAMMPS_DUMP_OUTPUT, N_FRAME, EV_FRAME, network, mass_of_type, dump_col, num_of_type)
+   ExportLammpsDump(LAMMPS_DUMP_INPUT, LAMMPS_DUMP_OUTPUT, N_FRAME, EV_FRAME, network, mass_of_type, num_of_type)

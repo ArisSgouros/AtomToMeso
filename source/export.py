@@ -1,6 +1,43 @@
 from copy import deepcopy
 from network import EMPTY, H_MASS, c_atom
 
+def GetDumpFormat(filename):
+   col = {}
+   f = open(filename,"r")
+   line = ""
+   for ii in range(9):
+      line = f.readline()
+   f.close()
+   header = line.split()
+   header = header[2:] # pop first two elements ('ITEM:', 'ATOMS')
+   for icol in range(len(header)):
+      attrib = header[icol]
+      if attrib == 'id':
+         col['id'] = icol
+      if attrib in ['type']:
+         col['type'] = icol
+      if attrib in ['mol']:
+         col['molid'] = icol
+      if attrib in ['x', 'xu', 'xs']:
+         col['x'] = icol
+      if attrib in ['y', 'yu', 'ys']:
+         col['y'] = icol
+      if attrib in ['z', 'zu', 'zs']:
+         col['z'] = icol
+   if not 'id' in col:
+      print('col id not found in the dump file')
+      sys.exit()
+   if not 'x' in col:
+      print('col x not found in the dump file')
+      sys.exit()
+   if not 'y' in col:
+      print('col yy not found in the dump file')
+      sys.exit()
+   if not 'z' in col:
+      print('col zz not found in the dump file')
+      sys.exit()
+   return col
+
 def ParseLammpsData(LAMMPS_DATA_INPUT, network, data_col):
 
    DATA_COL_ID    = data_col['id']
@@ -227,7 +264,8 @@ def ExportLammpsData(filename, network, bead_bonds, bead_angles, mass_of_bead, n
 
 
 
-def ExportLammpsDump(path_dump_in, path_dump_out, N_FRAME, EV_FRAME, network, mass_of_type, dump_col, num_of_type):
+def ExportLammpsDump(path_dump_in, path_dump_out, N_FRAME, EV_FRAME, network, mass_of_type, num_of_type):
+   dump_col = GetDumpFormat(path_dump_in)
 
    DUMP_COL_ID = dump_col['id']
    DUMP_COL_MOLID = dump_col['molid']
