@@ -2,161 +2,7 @@ import sys
 
 from copy import deepcopy
 
-
-def ExportLammpsData(filename, network, bead_bonds, bead_angles, mass_of_bead, num_of_bond_type, num_of_angle_type):
-   f = open(filename, 'w')
-
-   f.write('# Coarse grained LAMMPS data file\n')
-   f.write('\n')
-   f.write('%d atoms\n' % n_beads)
-   f.write('%d bonds\n' % n_beadbonds)
-   f.write('%d angless\n' % n_beadangles)
-   f.write('\n')
-   f.write('%d atom types\n' % n_bead_types)
-   f.write('%d bond types\n' % n_bead_bondtypes)
-   f.write('%d angle types\n' % n_bead_angletypes)
-   f.write('\n')
-   f.write('%s %s xlo xhi\n' % (xlo, xhi))
-   f.write('%s %s ylo yhi\n' % (ylo, yhi))
-   f.write('%s %s zlo zhi\n' % (zlo, zhi))
-   f.write('\n')
-   f.write('Atoms\n')
-   f.write('\n')
-
-   for group in network:
-      for bead in group.beads.values():
-         f.write("%d %d %d %16.9f %16.9f %16.9f %16.9f # %s\n" % ( bead.bId, bead.molId, num_of_type[bead.type], bead.q, bead.x, bead.y, bead.z, bead.type ))
-
-   if n_beadbonds:
-      f.write('\n')
-      f.write('Bonds\n')
-      f.write('\n')
-      for bond in bead_bonds:
-         f.write("%d %d %d %d # %s_%s\n" % ( bond.Id, bond.type, bond.i, bond.j, bond.itype, bond.jtype ))
-
-   if n_beadangles:
-      f.write('\n')
-      f.write('Angles\n')
-      f.write('\n')
-      for angle in bead_angles:
-         f.write("%d %d %d %d %d # %s_%s_%s\n" % ( angle.Id, angle.type, angle.i, angle.j, angle.k, angle.itype, angle.jtype, angle.ktype ))
-
-   f.write('\n')
-   f.write('Masses\n')
-   f.write('\n')
-   for bead_type in mass_of_bead:
-      f.write("%d %16.9f # %s\n" % (num_of_type[bead_type], mass_of_bead[bead_type], bead_type))
-
-   f.write('\n')
-   f.write('Pair Coeffs\n')
-   f.write('\n')
-   for bead_type in mass_of_bead:
-      f.write("%s DPD_COEFF_OF_%s # %s\n" % (num_of_type[bead_type], bead_type, bead_type))
-
-   if n_beadbonds:
-      f.write('\n')
-      f.write('Bond Coeffs\n')
-      f.write('\n')
-      for bond in num_of_bond_type:
-         f.write(str(num_of_bond_type[bond])+" Bond coeffs # " + bond+"\n")
-
-   if n_beadangles:
-      f.write('\n')
-      f.write('Angle Coeffs\n')
-      f.write('\n')
-      for angle in num_of_angle_type:
-         f.write(str(num_of_angle_type[angle])+" Angle coeffs # " + angle+"\n")
-
-   f.close()
-
-
-
-def ExportLammpsDump(path_dump_in, path_dump_out, N_FRAME, EV_FRAME, network):
-   fin = open(path_dump_in, 'r')
-   fout = open(path_dump_out, 'w')
-
-   iframe = -1
-
-   while True:
-
-      iframe += 1
-
-      if N_FRAME != "MAX":
-         if (iframe > 10 and iframe % int(N_FRAME / 10.0) == 0):
-            print(iframe)
-         if iframe == N_FRAME:
-            break
-
-      if (iframe % EV_FRAME != 0):
-         continue
-
-      line = fin.readline()
-      # Check if this is the end of file; if yes break the loop.
-      if line == '':
-         break
-      fout.write(line)
-
-      line = fin.readline()
-      fout.write(line)
-
-      line = fin.readline() # ITEM: NUMBER OF ATOMS
-      fout.write(line)
-
-      n_atoms = int(fin.readline().split()[0]) #
-
-      fout.write(str(n_beads)+"\n")
-      line = fin.readline() # ITEM: BOX BOUNDS pp pp pp
-      fout.write(line)
-      line = fin.readline() # X
-      fout.write(line)
-      line = fin.readline() # Y
-      fout.write(line)
-      line = fin.readline() # Z
-      fout.write(line)
-      line = fin.readline() # ITEM: ATOMS id mol type xu yu zu
-      fout.write(line)
-
-      atom_list = {}
-      for ii in range(n_atoms):
-         line_split = fin.readline().split()
-         iat.Id    = int(  line_split[DUMP_COL_ID])
-         iat.molId = int(  line_split[DUMP_COL_MOLID])
-         iat.type  = int(  line_split[DUMP_COL_TYPE])
-         iat.x     = float(line_split[DUMP_COL_X])
-         iat.y     = float(line_split[DUMP_COL_Y])
-         iat.z     = float(line_split[DUMP_COL_Z])
-         atom_list[iat.Id] = deepcopy(iat)
-
-
-      for group in network:
-         for bead in group.beads.values():
-            bead_x = 0
-            bead_y = 0
-            bead_z = 0
-            bead_mass = 0
-            for aId in bead.aIds:
-               atom = atom_list[aId]
-               imass = mass_of_type[atom.type]
-
-               bead_x += atom.x * imass
-               bead_y += atom.y * imass
-               bead_z += atom.z * imass
-               bead_mass += imass
-
-            bead.x = bead_x / bead_mass
-            bead.y = bead_y / bead_mass
-            bead.z = bead_z / bead_mass
-            bead.mass = bead_mass
-
-            fout.write("%d %d %d %16.9f %16.9f %16.9f\n" %(bead.bId, bead.molId, num_of_type[bead.type], bead.x, bead.y, bead.z))
-
-
-   fin.close()
-   fout.close()
-
-
-
-
+from export import ExportLammpsData, ExportLammpsDump
 
 EMPTY = "empty"
 H_MASS = 1.008
@@ -375,12 +221,7 @@ if n_sysargv == 5:
    LAMMPS_DUMP_OUTPUT = "o.cg.lammpstrj"
 
 # Set the format of Lammps data and dump files
-DUMP_COL_ID    = 0
-DUMP_COL_MOLID = 1
-DUMP_COL_TYPE  = 2
-DUMP_COL_X     = 3
-DUMP_COL_Y     = 4
-DUMP_COL_Z     = 5
+dump_col = {'id': 0, 'molid': 1, 'type': 2, 'x': 3, 'y': 4, 'z': 5}
 
 DATA_COL_ID    = 0
 DATA_COL_MOLID = 1
@@ -610,6 +451,7 @@ print()
 print("Parsing lammps data file: ",LAMMPS_DATA_INPUT)
 print()
 n_atoms = 0
+box = {}
 g = open(LAMMPS_DATA_INPUT, 'r')
 
 lines = []
@@ -633,17 +475,17 @@ while True:
       n_atom_types = int(line_split[0])
 
    if "xlo xhi" in line:
-      xlo = line_split[0]
-      xhi = line_split[1]
-      Lx = float(xhi)-float(xlo)
+      box['xlo'] = line_split[0]
+      box['xhi'] = line_split[1]
+      Lx = float(box['xhi'])-float(box['xlo'])
    if "ylo yhi" in line:
-      ylo = line_split[0]
-      yhi = line_split[1]
-      Ly = float(yhi)-float(ylo)
+      box['ylo'] = line_split[0]
+      box['yhi'] = line_split[1]
+      Ly = float(box['yhi'])-float(box['ylo'])
    if "zlo zhi" in line:
-      zlo = line_split[0]
-      zhi = line_split[1]
-      Lz = float(zhi)-float(zlo)
+      box['zlo'] = line_split[0]
+      box['zhi'] = line_split[1]
+      Lz = float(box['zhi'])-float(box['zlo'])
 
    if "Atoms" in line:
       Atoms_start = line_num + 2
@@ -743,7 +585,7 @@ for group in network:
 print("-----------------------------------------------")
 print("Generating the new lammps datafile with name " + LAMMPS_DATA_OUTPUT + "..")
 print("-----------------------------------------------")
-ExportLammpsData(LAMMPS_DATA_OUTPUT, network, bead_bonds, bead_angles, mass_of_bead, num_of_bond_type, num_of_angle_type)
+ExportLammpsData(LAMMPS_DATA_OUTPUT, network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box)
 print("SUCCESS!")
 
 
@@ -752,4 +594,4 @@ if n_sysargv == 5:
    print("-----------------------------------------------")
    print("Generating the new lammps dump with name " + LAMMPS_DUMP_OUTPUT + "..")
    print("-----------------------------------------------")
-   ExportLammpsDump(LAMMPS_DUMP_INPUT, LAMMPS_DUMP_OUTPUT, N_FRAME, EV_FRAME, network)
+   ExportLammpsDump(LAMMPS_DUMP_INPUT, LAMMPS_DUMP_OUTPUT, N_FRAME, EV_FRAME, network, mass_of_type, dump_col, num_of_type)
