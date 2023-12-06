@@ -39,7 +39,8 @@ if n_sysargv == 5:
    LAMMPS_DUMP_OUTPUT = "o.cg.lammpstrj"
 
 # Set the format of Lammps data file
-data_col = {'id': 0, 'molid': 1, 'type': 2, 'q': 3, 'x':4, 'y':5, 'z':6, 'ix':7, 'iy':8, 'iz':9}
+
+atomtype = 'full'
 
 
 # Set the local ids for each segment represented by a bead
@@ -113,7 +114,7 @@ for key in aLocIds:
    print(key, len(aLocIds[key]), aLocIds[key])
 print()
 
-network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type = Process(aLocIds, bond_pairs, angle_pairs, network, LAMMPS_DATA_INPUT, data_col, verbose)
+network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type = Process(aLocIds, bond_pairs, angle_pairs, network, LAMMPS_DATA_INPUT, atomtype, verbose)
 
 print("-----------------------------------------------")
 print("Generating the new lammps datafile with name " + LAMMPS_DATA_OUTPUT + "..")

@@ -38,7 +38,14 @@ def GetDumpFormat(filename):
       sys.exit()
    return col
 
-def ParseLammpsData(LAMMPS_DATA_INPUT, network, data_col):
+def ParseLammpsData(LAMMPS_DATA_INPUT, network, atomtype):
+
+   # Deal with the format of the Lammps data file
+   if atomtype == 'full':
+      data_col = {'id': 0, 'molid': 1, 'type': 2, 'q': 3, 'x':4, 'y':5, 'z':6, 'ix':7, 'iy':8, 'iz':9}
+   else:
+      print('unsupported format of Lammps data files for the atom type ' + atomtype)
+      sys.exit()
 
    DATA_COL_ID    = data_col['id']
    DATA_COL_MOLID = data_col['molid']
