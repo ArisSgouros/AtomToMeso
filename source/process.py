@@ -18,12 +18,12 @@ def GenGlobalId(network, verbose):
       if verbose:
          PrintNetStat(group)
 
-def EnumerateTypes(aLocIds, bond_pairs, angle_pairs):
+def EnumerateTypes(bead_types, bond_pairs, angle_pairs):
    # Enumerate bead types
    id = 1
    num_of_type = {}
-   for key in aLocIds:
-      num_of_type[key] = id
+   for bead in bead_types:
+      num_of_type[bead.type] = id
       id += 1
 
    # Enumerate the bond types
@@ -128,9 +128,9 @@ def GenAngle(network, num_of_angle_type, bead_bonds):
 
    return bead_angles
 
-def Process(aLocIds, bond_pairs, angle_pairs, network, path_lammps_data_in, atom_type, verbose):
+def Process(bead_types, bond_pairs, angle_pairs, network, path_lammps_data_in, atom_type, verbose):
 
-   num_of_type, num_of_bond_type, num_of_angle_type = EnumerateTypes(aLocIds, bond_pairs, angle_pairs)
+   num_of_type, num_of_bond_type, num_of_angle_type = EnumerateTypes(bead_types, bond_pairs, angle_pairs)
 
    print("-----------------------------------------------")
    print("Generating global IDs & Network stats..")

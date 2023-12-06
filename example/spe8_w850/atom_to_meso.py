@@ -17,25 +17,19 @@ if __name__ == "__main__":
    ev_frame = 1
    atomtype = 'full'
 
-   # Set the local ids for each segment represented by a bead
-   aLocIds={}
-   aLocIds["SB"]=[1,2,3,4,5,6,38,39,40,41]
-   aLocIds["SO"]=[7,8,9,10,11,12]
-   aLocIds["SN"]=[13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]
-   aLocIds["SS"]=[28,29,30,31,32,33,34,35,36,37]
-   aLocIds["W"]=[1,2,3]
-
    # Create the bead objects
    # SPE beads
-   bSB = Bead("SB",aLocIds["SB"],1)
+   bSB = Bead(1,"SB",[1,2,3,4,5,6,38,39,40,41])
    bSB.set_ahead(1)
    bSB.set_atail(41)
-   bSO = Bead("SO",aLocIds["SO"],2)
-   bSN = Bead("SN",aLocIds["SN"],3)
-   bSS = Bead("SS",aLocIds["SS"],4)
+   bSO = Bead(2,"SO",[7,8,9,10,11,12])
+   bSN = Bead(3,"SN",[13,14,15,16,17,18,19,20,21,22,23,24,25,26,27])
+   bSS = Bead(4,"SS",[28,29,30,31,32,33,34,35,36,37])
 
    # WATER bead
-   bW = Bead("W",aLocIds["W"],1)
+   bW = Bead(1,"W",[1,2,3])
+
+   bead_types = [bSB, bSO, bSN, bSS, bW]
 
    # Create SPE group (repeat unit)
    gSPE = Group("SPE")
@@ -84,11 +78,11 @@ if __name__ == "__main__":
    print("Local IDs of beads")
    print("-----------------------------------------------")
    print("type len LocalIds")
-   for key in aLocIds:
-      print(key, len(aLocIds[key]), aLocIds[key])
+   for bead in bead_types:
+      print(bead.type, len(bead.aIds), bead.aIds)
    print()
 
-   network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type = Process(aLocIds, bond_pairs, angle_pairs, network, path_lammps_data_in, atomtype, verbose)
+   network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box, mass_of_type = Process(bead_types, bond_pairs, angle_pairs, network, path_lammps_data_in, atomtype, verbose)
 
    print("-----------------------------------------------")
    print("Generating the new lammps datafile with name " + path_lammps_data_out + "..")

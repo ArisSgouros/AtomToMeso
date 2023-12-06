@@ -36,7 +36,7 @@ class BeadAngle:
       self.ktype = ktype
 
 class Bead():
-   def __init__(self, type, aIds, bId):
+   def __init__(self, bId, type, aIds):
       self.type = type
       self.molId = EMPTY
       self.bId = bId
