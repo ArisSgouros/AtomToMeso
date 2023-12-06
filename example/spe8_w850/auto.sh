@@ -3,7 +3,7 @@ DUMP_FILE="spe8_w850_0.lammpstrj"
 NFRAME=40
 EVFRAME=1
 
-python ../../source/atom_to_meso.py $DATAFILE $DUMP_FILE $NFRAME $EVFRAME > o.log
+python atom_to_meso.py $DATAFILE $DUMP_FILE $NFRAME $EVFRAME > o.log
 
 #python ../../source/lmp_type_strip.py o.cg.lammpstrj 3 "[5]" > o.cg.strip_5.lammpstrj
 #

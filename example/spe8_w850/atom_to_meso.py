@@ -1,5 +1,7 @@
 import sys
 
+sys.path.insert(0, '../../source/')
+
 from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
 from network import EMPTY, H_MASS, c_atom, c_bead_bond, c_bead_angle, c_bead, c_group, print_net_stats
