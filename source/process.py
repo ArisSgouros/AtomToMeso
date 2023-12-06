@@ -61,8 +61,8 @@ def GenBond(network, num_of_bond_type):
          try:
             type = num_of_bond_type[ aux ]
          except:
+            type = 0
             print("Unidentified bond type: " + aux)
-            exit()
 
          i = bond[0].bId
          j = bond[1].bId
@@ -118,8 +118,8 @@ def GenAngle(network, num_of_angle_type, bead_bonds):
             try:
                type = num_of_angle_type[ aux_type ]
             except:
+               type = 0
                print("Unidentified angle type: " + aux_type)
-             #  exit()
 
             iangle = BeadAngle(angle_id, type, angle_ids[0], angle_ids[1], angle_ids[2], angle_types[0], angle_types[1], angle_types[2])
             bead_angles.append(iangle)
