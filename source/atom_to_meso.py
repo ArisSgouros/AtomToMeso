@@ -157,37 +157,6 @@ def ExportLammpsDump(path_dump_in, path_dump_out, N_FRAME, EV_FRAME, network):
 
 
 
-n_sysargv = len(sys.argv)
-if n_sysargv != 2 and n_sysargv != 5:
-   print
-   print ("The required formats are the following:")
-   print
-   print ("python atom_to_meso.py \"LAMMPS_DATA_INPUT\" ")
-   print
-   print ("example: python atom_to_meso.py SVSV-W800.dat")
-   print
-   print ("or")
-   print
-   print ("python atom_to_meso.py \"LAMMPS_DATA_INPUT\" \"LAMMPS_DUMP_INPUT\" \"N_FRAME\" \"EV_FRAME\"")
-   print ("example 1: python atom_to_meso.py SS-W800.dat 1_prod.lammpstrj MAX 5")
-   print ("example 2: python atom_to_meso.py SS-W800.dat 1_prod.lammpstrj 30 10")
-   print
-   print ("exiting..")
-   sys.exit()
-
-LAMMPS_DATA_INPUT = sys.argv[1]
-LAMMPS_DATA_OUTPUT = "o.cg.dat"
-
-if n_sysargv == 5:
-   LAMMPS_DUMP_INPUT = sys.argv[2]
-
-   N_FRAME = sys.argv[3]
-   if N_FRAME != "MAX":
-      N_FRAME = int(sys.argv[3])
-
-   EV_FRAME = int(sys.argv[4])
-
-   LAMMPS_DUMP_OUTPUT = "o.cg.lammpstrj"
 
 EMPTY = "empty"
 H_MASS = 1.008
@@ -372,6 +341,38 @@ def print_net_stats(group):
 ############################################################
 # Interface
 ############################################################
+
+n_sysargv = len(sys.argv)
+if n_sysargv != 2 and n_sysargv != 5:
+   print
+   print ("The required formats are the following:")
+   print
+   print ("python atom_to_meso.py \"LAMMPS_DATA_INPUT\" ")
+   print
+   print ("example: python atom_to_meso.py SVSV-W800.dat")
+   print
+   print ("or")
+   print
+   print ("python atom_to_meso.py \"LAMMPS_DATA_INPUT\" \"LAMMPS_DUMP_INPUT\" \"N_FRAME\" \"EV_FRAME\"")
+   print ("example 1: python atom_to_meso.py SS-W800.dat 1_prod.lammpstrj MAX 5")
+   print ("example 2: python atom_to_meso.py SS-W800.dat 1_prod.lammpstrj 30 10")
+   print
+   print ("exiting..")
+   sys.exit()
+
+LAMMPS_DATA_INPUT = sys.argv[1]
+LAMMPS_DATA_OUTPUT = "o.cg.dat"
+
+if n_sysargv == 5:
+   LAMMPS_DUMP_INPUT = sys.argv[2]
+
+   N_FRAME = sys.argv[3]
+   if N_FRAME != "MAX":
+      N_FRAME = int(sys.argv[3])
+
+   EV_FRAME = int(sys.argv[4])
+
+   LAMMPS_DUMP_OUTPUT = "o.cg.lammpstrj"
 
 # Set the format of Lammps data and dump files
 DUMP_COL_ID    = 0
