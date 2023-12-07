@@ -570,19 +570,19 @@ Masses
 
 Pair Coeffs
 
-1 DPD_COEFF_OF_GR # GR
-2 DPD_COEFF_OF_GO # GO
-3 DPD_COEFF_OF_GP # GP
-4 DPD_COEFF_OF_GM # GM
+1 coeff_pair_GR # GR
+2 coeff_pair_GO # GO
+3 coeff_pair_GP # GP
+4 coeff_pair_GM # GM
 
 Bond Coeffs
 
-1 Bond coeffs # GO_GR
-2 Bond coeffs # GO_GP
-3 Bond coeffs # GM_GP
+1 coeff_bond_GO_GR # GO_GR
+2 coeff_bond_GO_GP # GO_GP
+3 coeff_bond_GM_GP # GM_GP
 
 Angle Coeffs
 
-1 Angle coeffs # GP_GO_GR
-2 Angle coeffs # GM_GP_GO
-3 Angle coeffs # GP_GM_GP
+1 coeff_angle_GP_GO_GR # GP_GO_GR
+2 coeff_angle_GM_GP_GO # GM_GP_GO
+3 coeff_angle_GP_GM_GP # GP_GM_GP
