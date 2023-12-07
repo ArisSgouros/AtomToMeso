@@ -1,6 +1,11 @@
 import sys
 
-sys.path.insert(0, '../../source/')
+# import path of source files from command line
+try:
+   path_a2m=sys.argv[1]
+except:
+   path_a2m='../../source/'
+sys.path.insert(0, path_a2m)
 
 from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
