@@ -42,8 +42,8 @@ class Bead():
       self.bId = bId
       self.aIds = aIds
       self.nat = len(aIds)
-      self.ahead = EMPTY
-      self.atail = EMPTY
+      self.ahead = False
+      self.atail = False
       self.x = ""
       self.y = ""
       self.z = ""
@@ -59,15 +59,17 @@ class Bead():
       self.aIds = [ aId + shift for aId in self.aIds ]
       #print(bead.bId, bead.aIds, shift)
 
-      if self.ahead != EMPTY:
+      if self.ahead:
          self.ahead += shift
-      if self.atail != EMPTY:
+      if self.atail:
          self.atail += shift
 
 class Group():
    def __init__(self, type):
       self.type = type
 
+      self.bhead = False
+      self.btail = False
       self.beads = {}
       self.nbead = 0
       self.bonds = []
@@ -98,6 +100,9 @@ class Group():
    def set_btail_by_ref(self, bead):
       self.btail = bead
 
+   def set_bhead_by_ref(self, bead):
+      self.bhead = bead
+
    def rmv_atom_from_bead(self, bead, aId):
       bead.aIds.remove(aId)
       bead.nat -= 1
@@ -127,7 +132,7 @@ class Group():
         if bead is right_group.bhead:
            #print('AHEAD BF: ahead ',bead.ahead," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", right_group.nat)
            right_group.rmv_atom_from_bead(bead, bead.ahead)
-           bead.ahead = EMPTY
+           bead.ahead = False
            #print('AHEAD AF: ahead ',bead.ahead," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", right_group.nat)
 
       # pop tail atoms from the tail beads of the left group
@@ -135,7 +140,7 @@ class Group():
         if bead is left_group.btail:
            #print('ATAIL BF: atail ',bead.atail," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", left_group.nat)
            left_group.rmv_atom_from_bead(bead, bead.atail)
-           bead.atail = EMPTY
+           bead.atail = False
            #print('ATAIL AF: atail ',bead.atail," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", left_group.nat)
       #print(left_group.type," + ",right_group.type)
       #print("left group n atoms: "+str(left_group.nat) + " " + str(right_group.nat))
