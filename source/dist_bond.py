@@ -66,7 +66,7 @@ for curLine in range(bondLineStart,bondLineEnd):
       atomIDs.append(int(curLineSplit[2]))
       atomIDs.append(int(curLineSplit[3]))
 
-print ( bonds )
+#print ( bonds )
 
 nBond = len(bonds)
 print ( "A total of",nBond,"bonds were selected" )
@@ -114,7 +114,7 @@ for tt in range(nFrame):
    f.readline()                # ITEM: TIMESTEP
    Timestep = int(f.readline())
 
-   if (tt % int(nFrame / 10.0) == 0):
+   if (nFrame > 10 and tt % int(nFrame / 10.0) == 0):
       print ( "time step = ", Timestep )
 
    f.readline()                # ITEM: NUMBER OF ATOMS
