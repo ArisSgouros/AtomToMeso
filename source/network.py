@@ -74,19 +74,31 @@ class Group():
       self.nbond = 0
       self.nat = 0
 
-   def add_bead(self, bead):
+   def add_bead(self, bId, type, aIds):
+      self.beads[bId] = Bead(bId, type, aIds)
+      self.nbead += 1
+      self.nat += self.beads[bId].nat
+
+   def add_bond(self, ii, jj):
+      self.bonds.append( [self.beads[ii], self.beads[jj]] )
+      self.nbond += 1
+
+   def add_bead_by_ref(self, bead):
       self.beads[bead.bId] = bead
       self.nbead += 1
       self.nat += bead.nat
 
-   def add_bond(self, bond):
+   def add_bond_by_ref(self, bond):
       self.bonds.append(bond)
       self.nbond += 1
 
-   def set_bhead(self, bead):
-      self.bhead = bead
+   def set_bhead(self, bId):
+      self.bhead = self.beads[bId]
 
-   def set_btail(self, bead):
+   def set_btail(self, bId):
+      self.btail = self.beads[bId]
+
+   def ins_btail(self, bead):
       self.btail = bead
 
    def rmv_atom_from_bead(self, bead, aId):
@@ -141,17 +153,17 @@ class Group():
 
       # Append the beads of right_group to left_group
       for bead in right_group.beads.values():
-         left_group.add_bead(bead)
+         left_group.add_bead_by_ref(bead)
          #left_group.nat += bead.nat
 
       # Connect the head of the right group to the tail of the left
-      left_group.add_bond( [left_group.btail, right_group.bhead]  )
+      left_group.add_bond_by_ref( [left_group.btail, right_group.bhead]  )
 
       # Append the bonds of right_group to left_group
       for bond in right_group.bonds:
-         left_group.add_bond(bond)
+         left_group.add_bond_by_ref(bond)
 
-      left_group.set_btail(right_group.btail)
+      left_group.ins_btail(right_group.btail)
 
       # Generate a new type description
       left_group.type += "-" + right_group.type
