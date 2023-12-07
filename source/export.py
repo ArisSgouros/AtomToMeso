@@ -1,5 +1,5 @@
 from copy import deepcopy
-from network import EMPTY, H_MASS, Atom
+from network import Atom
 
 def GetDumpFormat(filename):
    col = {}
@@ -172,24 +172,17 @@ def ParseLammpsData(path_lammps_data_in, network, atomtype):
          n_beads += 1
          #print(bead.bId, bead.molId, num_of_type[bead.type], bead.q, bead.x, bead.y, bead.z," # ",bead.mass, bead.type)
 
-   mass_of_bead = {}
-
    print("Assigning mass to beads..")
+   mass_of_beads = {}
    for group in network:
       for bead in group.beads.values():
-         imass = deepcopy(bead.mass)
-         if not bead.type in mass_of_bead:
-
-            print(bead.type)
-            print(imass)
-            if bead.ahead is not EMPTY:
-               imass -= H_MASS
-            print(imass, bead.ahead)
-            if bead.atail is not EMPTY:
-               imass -= H_MASS
-            print(imass, bead.atail)
-
-            mass_of_bead[bead.type] = imass
+         if not bead.type in mass_of_beads:
+            mass_of_beads[bead.type] = []
+         mass_of_beads[bead.type].append(bead.mass)
+   from statistics import mean
+   mass_of_bead = {}
+   for key in mass_of_beads:
+      mass_of_bead[key] = mean(mass_of_beads[key])
 
    return box, mass_of_type, atom_list, network, mass_of_bead, network
 

@@ -2,18 +2,15 @@ import sys
 
 from copy import deepcopy
 
-EMPTY = "empty"
-H_MASS = 1.008
-
 class Atom:
    def __init__(self):
-      self.Id = EMPTY
-      self.molId = EMPTY
-      self.type = EMPTY
-      self.q = ""
-      self.x = ""
-      self.y = ""
-      self.z = ""
+      self.Id = False
+      self.molId = False
+      self.type = False
+      self.q = False
+      self.x = False
+      self.y = False
+      self.z = False
 
 class BeadBond:
    def __init__(self, Id, type, i, j, itype, jtype):
@@ -38,15 +35,15 @@ class BeadAngle:
 class Bead():
    def __init__(self, bId, type, aIds):
       self.type = type
-      self.molId = EMPTY
+      self.molId = False
       self.bId = bId
       self.aIds = aIds
       self.ahead = False
       self.atail = False
-      self.x = ""
-      self.y = ""
-      self.z = ""
-      self.q = ""
+      self.x = False
+      self.y = False
+      self.z = False
+      self.q = False
 
    def get_nat(self):
       return len(self.aIds)
