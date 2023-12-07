@@ -6086,26 +6086,6 @@ Reading atoms section..
 
 Coarse graining atomistic trajectories..
 Assigning mass to beads..
-W
-18.0154
-17.0074 False
-15.999400000000001 False
-SB
-42.081
-41.073 2551
-40.065 False
-SO
-58.0368
-57.0288 False
-56.020799999999994 False
-SN
-72.1307
-71.12270000000001 False
-70.11470000000001 False
-SS
-108.11219999999999
-107.10419999999999 False
-106.0962 False
 -----------------------------------------------
 Generating the new lammps datafile with name o.cg.dat..
 -----------------------------------------------

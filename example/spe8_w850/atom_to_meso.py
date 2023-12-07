@@ -9,7 +9,7 @@ sys.path.insert(0, path_a2m)
 
 from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
-from network import EMPTY, H_MASS, Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat
+from network import Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat
 from process import Process
 
 if __name__ == "__main__":
