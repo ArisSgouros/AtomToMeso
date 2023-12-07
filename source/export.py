@@ -251,21 +251,21 @@ def ExportLammpsData(filename, network, bead_bonds, bead_angles, mass_of_bead, n
    f.write('Pair Coeffs\n')
    f.write('\n')
    for bead_type in mass_of_bead:
-      f.write("%s DPD_COEFF_OF_%s # %s\n" % (num_of_type[bead_type], bead_type, bead_type))
+      f.write("%s coeff_pair_%s # %s\n" % (num_of_type[bead_type], bead_type, bead_type))
 
    if num_of_bond_type:
       f.write('\n')
       f.write('Bond Coeffs\n')
       f.write('\n')
       for bond in num_of_bond_type:
-         f.write(str(num_of_bond_type[bond])+" Bond coeffs # " + bond+"\n")
+         f.write("%s coeff_bond_%s # %s\n" % (num_of_bond_type[bond], bond, bond))
 
    if num_of_angle_type:
       f.write('\n')
       f.write('Angle Coeffs\n')
       f.write('\n')
       for angle in num_of_angle_type:
-         f.write(str(num_of_angle_type[angle])+" Angle coeffs # " + angle+"\n")
+         f.write("%s coeff_angle_%s # %s\n" % (num_of_angle_type[angle], angle, angle))
 
    f.close()
 
