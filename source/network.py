@@ -41,13 +41,15 @@ class Bead():
       self.molId = EMPTY
       self.bId = bId
       self.aIds = aIds
-      self.nat = len(aIds)
       self.ahead = False
       self.atail = False
       self.x = ""
       self.y = ""
       self.z = ""
       self.q = ""
+
+   def get_nat(self):
+      return len(self.aIds)
 
    def set_ahead(self, aId):
       self.ahead = aId
@@ -78,7 +80,7 @@ class Group():
    def add_bead(self, bId, type, aIds):
       self.beads[bId] = Bead(bId, type, aIds)
       self.nbead += 1
-      self.nat += self.beads[bId].nat
+      self.nat += self.beads[bId].get_nat()
 
    def add_bond(self, ii, jj):
       self.bonds.append( [self.beads[ii], self.beads[jj]] )
@@ -86,7 +88,7 @@ class Group():
    def add_bead_by_ref(self, bead):
       self.beads[bead.bId] = bead
       self.nbead += 1
-      self.nat += bead.nat
+      self.nat += bead.get_nat()
 
    def add_bond_by_ref(self, bond):
       self.bonds.append(bond)
@@ -105,7 +107,6 @@ class Group():
 
    def rmv_atom_from_bead(self, bead, aId):
       bead.aIds.remove(aId)
-      bead.nat -= 1
       self.nat -= 1
 
    def shift_lids(self, shift):
