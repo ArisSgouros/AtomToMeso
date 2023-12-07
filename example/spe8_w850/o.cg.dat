@@ -980,22 +980,22 @@ Masses
 
 Pair Coeffs
 
-1 DPD_COEFF_OF_W # W
-2 DPD_COEFF_OF_SB # SB
-3 DPD_COEFF_OF_SO # SO
-4 DPD_COEFF_OF_SN # SN
-5 DPD_COEFF_OF_SS # SS
+1 coeff_pair_W # W
+2 coeff_pair_SB # SB
+3 coeff_pair_SO # SO
+4 coeff_pair_SN # SN
+5 coeff_pair_SS # SS
 
 Bond Coeffs
 
-1 Bond coeffs # SB_SO
-2 Bond coeffs # SN_SO
-3 Bond coeffs # SN_SS
-4 Bond coeffs # SB_SB
+1 coeff_bond_SB_SO # SB_SO
+2 coeff_bond_SN_SO # SN_SO
+3 coeff_bond_SN_SS # SN_SS
+4 coeff_bond_SB_SB # SB_SB
 
 Angle Coeffs
 
-1 Angle coeffs # SB_SO_SN
-2 Angle coeffs # SB_SB_SO
-3 Angle coeffs # SO_SN_SS
-4 Angle coeffs # SB_SB_SB
+1 coeff_angle_SB_SO_SN # SB_SO_SN
+2 coeff_angle_SB_SB_SO # SB_SB_SO
+3 coeff_angle_SO_SN_SS # SO_SN_SS
+4 coeff_angle_SB_SB_SB # SB_SB_SB
