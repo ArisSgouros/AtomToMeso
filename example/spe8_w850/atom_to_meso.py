@@ -22,35 +22,23 @@ if __name__ == "__main__":
    ev_frame = 1
    atomtype = 'full'
 
-   # Create the bead objects
-   # SPE beads
-   bSB = Bead(1,"SB",[1,2,3,4,5,6,38,39,40,41])
-   bSB.set_ahead(1)
-   bSB.set_atail(41)
-   bSO = Bead(2,"SO",[7,8,9,10,11,12])
-   bSN = Bead(3,"SN",[13,14,15,16,17,18,19,20,21,22,23,24,25,26,27])
-   bSS = Bead(4,"SS",[28,29,30,31,32,33,34,35,36,37])
-
-   # WATER bead
-   bW = Bead(1,"W",[1,2,3])
-
-   bead_types = [bSB, bSO, bSN, bSS, bW]
-
    # Create SPE group (repeat unit)
    gSPE = Group("SPE")
-   gSPE.add_bead( bSB )
-   gSPE.add_bead( bSO )
-   gSPE.add_bead( bSN )
-   gSPE.add_bead( bSS )
-   gSPE.add_bond( [bSB, bSO] )
-   gSPE.add_bond( [bSO, bSN] )
-   gSPE.add_bond( [bSN, bSS] )
-   gSPE.set_bhead(bSB)
-   gSPE.set_btail(bSB)
+   gSPE.add_bead( 1, "SB", [1,2,3,4,5,6,38,39,40,41] )
+   gSPE.add_bead( 2, "SO", [7,8,9,10,11,12] )
+   gSPE.add_bead( 3, "SN", [13,14,15,16,17,18,19,20,21,22,23,24,25,26,27] )
+   gSPE.add_bead( 4, "SS", [28,29,30,31,32,33,34,35,36,37] )
+   gSPE.add_bond( 1, 2 )
+   gSPE.add_bond( 2, 3 )
+   gSPE.add_bond( 3, 4 )
+   gSPE.beads[1].set_ahead(1)
+   gSPE.beads[1].set_atail(41)
+   gSPE.set_bhead(1)
+   gSPE.set_btail(1)
 
    # Create the water group
    gW = Group("W")
-   gW.add_bead(bW)
+   gW.add_bead(1,"W",[1,2,3])
 
    # Generate chains by merging groups
    print("Generating chains..")
@@ -75,7 +63,7 @@ if __name__ == "__main__":
    print("Local IDs of beads")
    print("-----------------------------------------------")
    print("type len LocalIds")
-   for bead in bead_types:
+   for bead in [gSPE.beads[1], gSPE.beads[2], gSPE.beads[3], gSPE.beads[4], gW.beads[1]]:
       print(bead.type, len(bead.aIds), bead.aIds)
    print()
 
