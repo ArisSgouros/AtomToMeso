@@ -4,7 +4,7 @@ sys.path.insert(0, '../../source/')
 
 from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
-from network import EMPTY, H_MASS, Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat
+from network import Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat
 from process import Process
 
 if __name__ == "__main__":
@@ -17,37 +17,26 @@ if __name__ == "__main__":
    ev_frame = 1
    atomtype = 'full'
 
-   # GDEBF beads
-   bG1 = Bead(1,"GR",[1,44,5,2,7,4,3,47,6,9,10])
-   bG1.set_ahead(1)
-   bG2 = Bead(2,"GO",[8])
-   bG3 = Bead(3,"GP",[11,12,13,17,15,18,14,16,19,20])
-   bG4 = Bead(4,"GM",[21,42,43])
-   bG5 = Bead(5,"GP",[22,23,24,28,26,27,29,25,31,30])
-   bG6 = Bead(6,"GO",[32])
-   bG7 = Bead(7,"GR",[36,35,33,46,37,34,39,40,38,45,41])
-   bG7.set_atail(45)
-
-   bead_types = [bG1, bG2, bG3, bG4, bG5, bG6, bG7]
-
    gDGEBF = Group("DGFBE")
-   gDGEBF.add_bead( bG1)
-   gDGEBF.add_bead( bG2 )
-   gDGEBF.add_bead( bG3 )
-   gDGEBF.add_bead( bG4 )
-   gDGEBF.add_bead( bG5 )
-   gDGEBF.add_bead( bG6 )
-   gDGEBF.add_bead( bG7 )
+   gDGEBF.add_bead(1,"GR",[1,44,5,2,7,4,3,47,6,9,10])
+   gDGEBF.add_bead(2,"GO",[8])
+   gDGEBF.add_bead(3,"GP",[11,12,13,17,15,18,14,16,19,20])
+   gDGEBF.add_bead(4,"GM",[21,42,43])
+   gDGEBF.add_bead(5,"GP",[22,23,24,28,26,27,29,25,31,30])
+   gDGEBF.add_bead(6,"GO",[32])
+   gDGEBF.add_bead(7,"GR",[36,35,33,46,37,34,39,40,38,45,41])
 
-   gDGEBF.add_bond( [bG1, bG2] )
-   gDGEBF.add_bond( [bG2, bG3] )
-   gDGEBF.add_bond( [bG3, bG4] )
-   gDGEBF.add_bond( [bG4, bG5] )
-   gDGEBF.add_bond( [bG5, bG6] )
-   gDGEBF.add_bond( [bG6, bG7] )
+   gDGEBF.add_bond(1,2)
+   gDGEBF.add_bond(2,3)
+   gDGEBF.add_bond(3,4)
+   gDGEBF.add_bond(4,5)
+   gDGEBF.add_bond(5,6)
+   gDGEBF.add_bond(6,7)
 
-   gDGEBF.set_bhead(bG1)
-   gDGEBF.set_btail(bG7)
+   gDGEBF.set_bhead(1)
+   gDGEBF.set_btail(7)
+   gDGEBF.beads[1].set_ahead(1)
+   gDGEBF.beads[7].set_ahead(45)
 
 
 
@@ -72,7 +61,7 @@ if __name__ == "__main__":
    print("Local IDs of beads")
    print("-----------------------------------------------")
    print("type len LocalIds")
-   for bead in bead_types:
+   for bead in gDGEBF.beads.values():
       print(bead.type, len(bead.aIds), bead.aIds)
    print()
 
@@ -82,7 +71,6 @@ if __name__ == "__main__":
    print("Generating the new lammps datafile with name " + path_lammps_data_out + "..")
    print("-----------------------------------------------")
    ExportLammpsData(path_lammps_data_out, network, bead_bonds, bead_angles, mass_of_bead, num_of_type, num_of_bond_type, num_of_angle_type, box)
-   print("SUCCESS!")
 
    print("-----------------------------------------------")
    print("Generating the new lammps dump with name " + path_lammps_dump_out + "..")
