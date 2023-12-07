@@ -71,7 +71,6 @@ class Group():
       self.beads = {}
       self.nbead = 0
       self.bonds = []
-      self.nbond = 0
       self.nat = 0
 
    def add_bead(self, bId, type, aIds):
@@ -81,7 +80,6 @@ class Group():
 
    def add_bond(self, ii, jj):
       self.bonds.append( [self.beads[ii], self.beads[jj]] )
-      self.nbond += 1
 
    def add_bead_by_ref(self, bead):
       self.beads[bead.bId] = bead
@@ -90,7 +88,6 @@ class Group():
 
    def add_bond_by_ref(self, bond):
       self.bonds.append(bond)
-      self.nbond += 1
 
    def set_bhead(self, bId):
       self.bhead = self.beads[bId]
@@ -98,7 +95,7 @@ class Group():
    def set_btail(self, bId):
       self.btail = self.beads[bId]
 
-   def ins_btail(self, bead):
+   def set_btail_by_ref(self, bead):
       self.btail = bead
 
    def rmv_atom_from_bead(self, bead, aId):
@@ -163,7 +160,7 @@ class Group():
       for bond in right_group.bonds:
          left_group.add_bond_by_ref(bond)
 
-      left_group.ins_btail(right_group.btail)
+      left_group.set_btail_by_ref(right_group.btail)
 
       # Generate a new type description
       left_group.type += "-" + right_group.type
