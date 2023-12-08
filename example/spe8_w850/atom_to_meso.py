@@ -31,8 +31,8 @@ if __name__ == "__main__":
    gSPE.add_bond( 1, 2 )
    gSPE.add_bond( 2, 3 )
    gSPE.add_bond( 3, 4 )
-   gSPE.beads[1].set_ahead(1)
-   gSPE.beads[1].set_atail(41)
+   gSPE.beads[1].set_ahead(41)
+   gSPE.beads[1].set_atail(1)
    gSPE.set_bhead(1)
    gSPE.set_btail(1)
 
