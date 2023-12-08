@@ -121,7 +121,6 @@ def Process(network, path_lammps_data_in, atom_type, verbose):
    for group in network:
       for bead in group.beads.values():
          for aid in bead.aIds:
-            print(aid)
             if aid in aux_id_list:
                print("ERROR: nonunique atom id", aid)
                sys.exit()
