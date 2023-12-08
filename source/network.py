@@ -125,21 +125,21 @@ class Group():
       for bead in right_group.beads.values():
          bead.bId += left_group.nbead
 
-      # pop head atoms from the head beads of the right group
+      # pop tail atoms from the tail beads of the right group
       for bead in right_group.beads.values():
-        if bead is right_group.bhead:
-           #print('AHEAD BF: ahead ',bead.ahead," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", right_group.nat)
-           right_group.rmv_atom_from_bead(bead, bead.ahead)
-           bead.ahead = False
-           #print('AHEAD AF: ahead ',bead.ahead," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", right_group.nat)
-
-      # pop tail atoms from the tail beads of the left group
-      for bead in left_group.beads.values():
-        if bead is left_group.btail:
-           #print('ATAIL BF: atail ',bead.atail," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", left_group.nat)
-           left_group.rmv_atom_from_bead(bead, bead.atail)
+        if bead is right_group.btail:
+           #print('AHEAD BF: atail ',bead.atail," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", right_group.nat)
+           right_group.rmv_atom_from_bead(bead, bead.atail)
            bead.atail = False
-           #print('ATAIL AF: atail ',bead.atail," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", left_group.nat)
+           #print('AHEAD AF: atail ',bead.atail," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", right_group.nat)
+
+      # pop head atoms from the head beads of the left group
+      for bead in left_group.beads.values():
+        if bead is left_group.bhead:
+           #print('Atail BF: ahead ',bead.ahead," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", left_group.nat)
+           left_group.rmv_atom_from_bead(bead, bead.ahead)
+           bead.ahead = False
+           #print('Atail AF: ahead ',bead.ahead," from ", bead.aIds, "( bead nat: ", bead.nat , " gr nat: ", left_group.nat)
       #print(left_group.type," + ",right_group.type)
       #print("left group n atoms: "+str(left_group.nat) + " " + str(right_group.nat))
 
@@ -156,21 +156,21 @@ class Group():
          left_group.add_bead_by_ref(bead)
          #left_group.nat += bead.nat
 
-      # Connect the head of the right group to the tail of the left
-      left_group.add_bond_by_ref( [left_group.btail, right_group.bhead]  )
+      # Connect the tail of the right group to the head of the left
+      left_group.add_bond_by_ref( [left_group.bhead, right_group.btail]  )
 
       # Append the bonds of right_group to left_group
       for bond in right_group.bonds:
          left_group.add_bond_by_ref(bond)
 
-      left_group.set_btail_by_ref(right_group.btail)
+      left_group.set_bhead_by_ref(right_group.bhead)
 
       # Generate a new type description
       left_group.type += "-" + right_group.type
 
       #print(left_group.type)
       #for bead in left_group.beads.values():
-      #   print (bead.bId, bead.ahead, bead.atail)
+      #   print (bead.bId, bead.atail, bead.ahead)
 
       return left_group
 
