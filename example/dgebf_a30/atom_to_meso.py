@@ -33,10 +33,10 @@ if __name__ == "__main__":
    gDGEBF.add_bond(5,6)
    gDGEBF.add_bond(6,7)
 
-   gDGEBF.set_bhead(1)
-   gDGEBF.set_btail(7)
-   gDGEBF.beads[1].set_ahead(1)
+   gDGEBF.set_bhead(7)
+   gDGEBF.set_btail(1)
    gDGEBF.beads[7].set_ahead(45)
+   gDGEBF.beads[1].set_ahead(1)
 
 
 

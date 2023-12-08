@@ -12,8 +12,8 @@ bIds type ahead atail aIds
 5 GP False False [22, 23, 24, 28, 26, 27, 29, 25, 31, 30]
 6 GO False False [32]
 7 GR 45 False [36, 35, 33, 46, 37, 34, 39, 40, 38, 45, 41]
-head 1 GR
-tail 7 GR
+head 7 GR
+tail 1 GR
 bond pairs
 1 2  #  GR GO
 2 3  #  GO GP
@@ -48,8 +48,8 @@ bIds type ahead atail aIds
 5 GP False False [22, 23, 24, 28, 26, 27, 29, 25, 31, 30]
 6 GO False False [32]
 7 GR 45 False [36, 35, 33, 46, 37, 34, 39, 40, 38, 45, 41]
-head 1 GR
-tail 7 GR
+head 7 GR
+tail 1 GR
 bond pairs
 1 2  #  GR GO
 2 3  #  GO GP
@@ -68,8 +68,8 @@ bIds type ahead atail aIds
 12 GP False False [69, 70, 71, 75, 73, 74, 76, 72, 78, 77]
 13 GO False False [79]
 14 GR 92 False [83, 82, 80, 93, 84, 81, 86, 87, 85, 92, 88]
-head 8 GR
-tail 14 GR
+head 14 GR
+tail 8 GR
 bond pairs
 8 9  #  GR GO
 9 10  #  GO GP
@@ -88,8 +88,8 @@ bIds type ahead atail aIds
 19 GP False False [116, 117, 118, 122, 120, 121, 123, 119, 125, 124]
 20 GO False False [126]
 21 GR 139 False [130, 129, 127, 140, 131, 128, 133, 134, 132, 139, 135]
-head 15 GR
-tail 21 GR
+head 21 GR
+tail 15 GR
 bond pairs
 15 16  #  GR GO
 16 17  #  GO GP
@@ -108,8 +108,8 @@ bIds type ahead atail aIds
 26 GP False False [163, 164, 165, 169, 167, 168, 170, 166, 172, 171]
 27 GO False False [173]
 28 GR 186 False [177, 176, 174, 187, 178, 175, 180, 181, 179, 186, 182]
-head 22 GR
-tail 28 GR
+head 28 GR
+tail 22 GR
 bond pairs
 22 23  #  GR GO
 23 24  #  GO GP
@@ -128,8 +128,8 @@ bIds type ahead atail aIds
 33 GP False False [210, 211, 212, 216, 214, 215, 217, 213, 219, 218]
 34 GO False False [220]
 35 GR 233 False [224, 223, 221, 234, 225, 222, 227, 228, 226, 233, 229]
-head 29 GR
-tail 35 GR
+head 35 GR
+tail 29 GR
 bond pairs
 29 30  #  GR GO
 30 31  #  GO GP
@@ -148,8 +148,8 @@ bIds type ahead atail aIds
 40 GP False False [257, 258, 259, 263, 261, 262, 264, 260, 266, 265]
 41 GO False False [267]
 42 GR 280 False [271, 270, 268, 281, 272, 269, 274, 275, 273, 280, 276]
-head 36 GR
-tail 42 GR
+head 42 GR
+tail 36 GR
 bond pairs
 36 37  #  GR GO
 37 38  #  GO GP
@@ -168,8 +168,8 @@ bIds type ahead atail aIds
 47 GP False False [304, 305, 306, 310, 308, 309, 311, 307, 313, 312]
 48 GO False False [314]
 49 GR 327 False [318, 317, 315, 328, 319, 316, 321, 322, 320, 327, 323]
-head 43 GR
-tail 49 GR
+head 49 GR
+tail 43 GR
 bond pairs
 43 44  #  GR GO
 44 45  #  GO GP
@@ -188,8 +188,8 @@ bIds type ahead atail aIds
 54 GP False False [351, 352, 353, 357, 355, 356, 358, 354, 360, 359]
 55 GO False False [361]
 56 GR 374 False [365, 364, 362, 375, 366, 363, 368, 369, 367, 374, 370]
-head 50 GR
-tail 56 GR
+head 56 GR
+tail 50 GR
 bond pairs
 50 51  #  GR GO
 51 52  #  GO GP
@@ -208,8 +208,8 @@ bIds type ahead atail aIds
 61 GP False False [398, 399, 400, 404, 402, 403, 405, 401, 407, 406]
 62 GO False False [408]
 63 GR 421 False [412, 411, 409, 422, 413, 410, 415, 416, 414, 421, 417]
-head 57 GR
-tail 63 GR
+head 63 GR
+tail 57 GR
 bond pairs
 57 58  #  GR GO
 58 59  #  GO GP
@@ -228,8 +228,8 @@ bIds type ahead atail aIds
 68 GP False False [445, 446, 447, 451, 449, 450, 452, 448, 454, 453]
 69 GO False False [455]
 70 GR 468 False [459, 458, 456, 469, 460, 457, 462, 463, 461, 468, 464]
-head 64 GR
-tail 70 GR
+head 70 GR
+tail 64 GR
 bond pairs
 64 65  #  GR GO
 65 66  #  GO GP
@@ -248,8 +248,8 @@ bIds type ahead atail aIds
 75 GP False False [492, 493, 494, 498, 496, 497, 499, 495, 501, 500]
 76 GO False False [502]
 77 GR 515 False [506, 505, 503, 516, 507, 504, 509, 510, 508, 515, 511]
-head 71 GR
-tail 77 GR
+head 77 GR
+tail 71 GR
 bond pairs
 71 72  #  GR GO
 72 73  #  GO GP
@@ -268,8 +268,8 @@ bIds type ahead atail aIds
 82 GP False False [539, 540, 541, 545, 543, 544, 546, 542, 548, 547]
 83 GO False False [549]
 84 GR 562 False [553, 552, 550, 563, 554, 551, 556, 557, 555, 562, 558]
-head 78 GR
-tail 84 GR
+head 84 GR
+tail 78 GR
 bond pairs
 78 79  #  GR GO
 79 80  #  GO GP
@@ -288,8 +288,8 @@ bIds type ahead atail aIds
 89 GP False False [586, 587, 588, 592, 590, 591, 593, 589, 595, 594]
 90 GO False False [596]
 91 GR 609 False [600, 599, 597, 610, 601, 598, 603, 604, 602, 609, 605]
-head 85 GR
-tail 91 GR
+head 91 GR
+tail 85 GR
 bond pairs
 85 86  #  GR GO
 86 87  #  GO GP
@@ -308,8 +308,8 @@ bIds type ahead atail aIds
 96 GP False False [633, 634, 635, 639, 637, 638, 640, 636, 642, 641]
 97 GO False False [643]
 98 GR 656 False [647, 646, 644, 657, 648, 645, 650, 651, 649, 656, 652]
-head 92 GR
-tail 98 GR
+head 98 GR
+tail 92 GR
 bond pairs
 92 93  #  GR GO
 93 94  #  GO GP
@@ -328,8 +328,8 @@ bIds type ahead atail aIds
 103 GP False False [680, 681, 682, 686, 684, 685, 687, 683, 689, 688]
 104 GO False False [690]
 105 GR 703 False [694, 693, 691, 704, 695, 692, 697, 698, 696, 703, 699]
-head 99 GR
-tail 105 GR
+head 105 GR
+tail 99 GR
 bond pairs
 99 100  #  GR GO
 100 101  #  GO GP
@@ -348,8 +348,8 @@ bIds type ahead atail aIds
 110 GP False False [727, 728, 729, 733, 731, 732, 734, 730, 736, 735]
 111 GO False False [737]
 112 GR 750 False [741, 740, 738, 751, 742, 739, 744, 745, 743, 750, 746]
-head 106 GR
-tail 112 GR
+head 112 GR
+tail 106 GR
 bond pairs
 106 107  #  GR GO
 107 108  #  GO GP
@@ -368,8 +368,8 @@ bIds type ahead atail aIds
 117 GP False False [774, 775, 776, 780, 778, 779, 781, 777, 783, 782]
 118 GO False False [784]
 119 GR 797 False [788, 787, 785, 798, 789, 786, 791, 792, 790, 797, 793]
-head 113 GR
-tail 119 GR
+head 119 GR
+tail 113 GR
 bond pairs
 113 114  #  GR GO
 114 115  #  GO GP
@@ -388,8 +388,8 @@ bIds type ahead atail aIds
 124 GP False False [821, 822, 823, 827, 825, 826, 828, 824, 830, 829]
 125 GO False False [831]
 126 GR 844 False [835, 834, 832, 845, 836, 833, 838, 839, 837, 844, 840]
-head 120 GR
-tail 126 GR
+head 126 GR
+tail 120 GR
 bond pairs
 120 121  #  GR GO
 121 122  #  GO GP
@@ -408,8 +408,8 @@ bIds type ahead atail aIds
 131 GP False False [868, 869, 870, 874, 872, 873, 875, 871, 877, 876]
 132 GO False False [878]
 133 GR 891 False [882, 881, 879, 892, 883, 880, 885, 886, 884, 891, 887]
-head 127 GR
-tail 133 GR
+head 133 GR
+tail 127 GR
 bond pairs
 127 128  #  GR GO
 128 129  #  GO GP
@@ -428,8 +428,8 @@ bIds type ahead atail aIds
 138 GP False False [915, 916, 917, 921, 919, 920, 922, 918, 924, 923]
 139 GO False False [925]
 140 GR 938 False [929, 928, 926, 939, 930, 927, 932, 933, 931, 938, 934]
-head 134 GR
-tail 140 GR
+head 140 GR
+tail 134 GR
 bond pairs
 134 135  #  GR GO
 135 136  #  GO GP
@@ -448,8 +448,8 @@ bIds type ahead atail aIds
 145 GP False False [962, 963, 964, 968, 966, 967, 969, 965, 971, 970]
 146 GO False False [972]
 147 GR 985 False [976, 975, 973, 986, 977, 974, 979, 980, 978, 985, 981]
-head 141 GR
-tail 147 GR
+head 147 GR
+tail 141 GR
 bond pairs
 141 142  #  GR GO
 142 143  #  GO GP
@@ -468,8 +468,8 @@ bIds type ahead atail aIds
 152 GP False False [1009, 1010, 1011, 1015, 1013, 1014, 1016, 1012, 1018, 1017]
 153 GO False False [1019]
 154 GR 1032 False [1023, 1022, 1020, 1033, 1024, 1021, 1026, 1027, 1025, 1032, 1028]
-head 148 GR
-tail 154 GR
+head 154 GR
+tail 148 GR
 bond pairs
 148 149  #  GR GO
 149 150  #  GO GP
@@ -488,8 +488,8 @@ bIds type ahead atail aIds
 159 GP False False [1056, 1057, 1058, 1062, 1060, 1061, 1063, 1059, 1065, 1064]
 160 GO False False [1066]
 161 GR 1079 False [1070, 1069, 1067, 1080, 1071, 1068, 1073, 1074, 1072, 1079, 1075]
-head 155 GR
-tail 161 GR
+head 161 GR
+tail 155 GR
 bond pairs
 155 156  #  GR GO
 156 157  #  GO GP
@@ -508,8 +508,8 @@ bIds type ahead atail aIds
 166 GP False False [1103, 1104, 1105, 1109, 1107, 1108, 1110, 1106, 1112, 1111]
 167 GO False False [1113]
 168 GR 1126 False [1117, 1116, 1114, 1127, 1118, 1115, 1120, 1121, 1119, 1126, 1122]
-head 162 GR
-tail 168 GR
+head 168 GR
+tail 162 GR
 bond pairs
 162 163  #  GR GO
 163 164  #  GO GP
@@ -528,8 +528,8 @@ bIds type ahead atail aIds
 173 GP False False [1150, 1151, 1152, 1156, 1154, 1155, 1157, 1153, 1159, 1158]
 174 GO False False [1160]
 175 GR 1173 False [1164, 1163, 1161, 1174, 1165, 1162, 1167, 1168, 1166, 1173, 1169]
-head 169 GR
-tail 175 GR
+head 175 GR
+tail 169 GR
 bond pairs
 169 170  #  GR GO
 170 171  #  GO GP
@@ -548,8 +548,8 @@ bIds type ahead atail aIds
 180 GP False False [1197, 1198, 1199, 1203, 1201, 1202, 1204, 1200, 1206, 1205]
 181 GO False False [1207]
 182 GR 1220 False [1211, 1210, 1208, 1221, 1212, 1209, 1214, 1215, 1213, 1220, 1216]
-head 176 GR
-tail 182 GR
+head 182 GR
+tail 176 GR
 bond pairs
 176 177  #  GR GO
 177 178  #  GO GP
@@ -568,8 +568,8 @@ bIds type ahead atail aIds
 187 GP False False [1244, 1245, 1246, 1250, 1248, 1249, 1251, 1247, 1253, 1252]
 188 GO False False [1254]
 189 GR 1267 False [1258, 1257, 1255, 1268, 1259, 1256, 1261, 1262, 1260, 1267, 1263]
-head 183 GR
-tail 189 GR
+head 189 GR
+tail 183 GR
 bond pairs
 183 184  #  GR GO
 184 185  #  GO GP
@@ -588,8 +588,8 @@ bIds type ahead atail aIds
 194 GP False False [1291, 1292, 1293, 1297, 1295, 1296, 1298, 1294, 1300, 1299]
 195 GO False False [1301]
 196 GR 1314 False [1305, 1304, 1302, 1315, 1306, 1303, 1308, 1309, 1307, 1314, 1310]
-head 190 GR
-tail 196 GR
+head 196 GR
+tail 190 GR
 bond pairs
 190 191  #  GR GO
 191 192  #  GO GP
@@ -608,8 +608,8 @@ bIds type ahead atail aIds
 201 GP False False [1338, 1339, 1340, 1344, 1342, 1343, 1345, 1341, 1347, 1346]
 202 GO False False [1348]
 203 GR 1361 False [1352, 1351, 1349, 1362, 1353, 1350, 1355, 1356, 1354, 1361, 1357]
-head 197 GR
-tail 203 GR
+head 203 GR
+tail 197 GR
 bond pairs
 197 198  #  GR GO
 198 199  #  GO GP
@@ -628,8 +628,8 @@ bIds type ahead atail aIds
 208 GP False False [1385, 1386, 1387, 1391, 1389, 1390, 1392, 1388, 1394, 1393]
 209 GO False False [1395]
 210 GR 1408 False [1399, 1398, 1396, 1409, 1400, 1397, 1402, 1403, 1401, 1408, 1404]
-head 204 GR
-tail 210 GR
+head 210 GR
+tail 204 GR
 bond pairs
 204 205  #  GR GO
 205 206  #  GO GP
@@ -664,7 +664,6 @@ Assigning mass to beads..
 -----------------------------------------------
 Generating the new lammps datafile with name o.cg.dat..
 -----------------------------------------------
-SUCCESS!
 -----------------------------------------------
 Generating the new lammps dump with name o.cg.lammpstrj..
 -----------------------------------------------
