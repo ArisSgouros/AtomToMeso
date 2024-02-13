@@ -9,7 +9,7 @@ sys.path.insert(0, path_a2m)
 
 from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
-from network import Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat, ReadGroup
+from network import Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat, ReadGroup, ExportGroup
 from process import Process
 from compute_bond import ComputeBond
 from compute_angle import ComputeAngle
@@ -25,6 +25,11 @@ if __name__ == "__main__":
    atomtype = 'full'
 
    gSPE = ReadGroup("SPE")
+ 
+   # text the export function
+   gSPE_COPY = deepcopy(gSPE)
+   gSPE_COPY.type = "SPE_COPY"
+   ExportGroup(gSPE_COPY)
 
    gW = ReadGroup("W")
 
