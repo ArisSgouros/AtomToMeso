@@ -245,8 +245,8 @@ def ExportGroup(group):
          for aid in bead.aIds:
             foo.write(" %d" % (aid))
          foo.write("\n")
+      foo.write("\n")
       if group.bonds:
-         foo.write("\n")
          foo.write("Bonds\n")
          foo.write("\n")
          for bond in group.bonds:
