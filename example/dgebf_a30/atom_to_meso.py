@@ -17,7 +17,7 @@ if __name__ == "__main__":
    ev_frame = 1
    atomtype = 'full'
 
-   gDGEBF = Group("DGFBE")
+   gDGEBF = Group("DGEBF")
    gDGEBF.add_bead(1,"GR",[1,44,5,2,7,4,3,47,6,9,10])
    gDGEBF.add_bead(2,"GO",[8])
    gDGEBF.add_bead(3,"GP",[11,12,13,17,15,18,14,16,19,20])
