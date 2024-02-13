@@ -6101,3 +6101,139 @@ Generating the new lammps dump with name o.cg.lammpstrj..
 32
 36
 40
+Selected bond types: [1]
+Reading the connectivity from: o.cg.dat ..
+A total of 8 bonds were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.bondIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000
+Selected bond types: [2]
+Reading the connectivity from: o.cg.dat ..
+A total of 8 bonds were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.bondIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000
+Selected bond types: [3]
+Reading the connectivity from: o.cg.dat ..
+A total of 8 bonds were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.bondIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000
+Selected bond types: [4]
+Reading the connectivity from: o.cg.dat ..
+A total of 7 bonds were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.bondIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000
+Selected angle types: [1]
+Reading the connectivity from: o.cg.dat ..
+A total of 8 angles were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.angleIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000
+Selected angle types: [2]
+Reading the connectivity from: o.cg.dat ..
+A total of 14 angles were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.angleIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000
+Selected angle types: [3]
+Reading the connectivity from: o.cg.dat ..
+A total of 8 angles were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.angleIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000
+Selected angle types: [4]
+Reading the connectivity from: o.cg.dat ..
+A total of 6 angles were selected
+Printing the atom IDs in o.atomIDs.dat..
+Printing the connectivity in o.angleIDs.dat..
+Number of Frames: 40
+Reading the trajectory file o.cg.lammpstrj ..
+time step =  114600000
+time step =  114800000
+time step =  115000000
+time step =  115200000
+time step =  115400000
+time step =  115600000
+time step =  115800000
+time step =  116000000
+time step =  116200000
+time step =  116400000

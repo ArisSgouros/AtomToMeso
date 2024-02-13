@@ -11,6 +11,8 @@ from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
 from network import Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat
 from process import Process
+from compute_bond import ComputeBond
+from compute_angle import ComputeAngle
 
 if __name__ == "__main__":
    path_lammps_data_in = "spe8_w850.data"
@@ -79,3 +81,12 @@ if __name__ == "__main__":
    print("Generating the new lammps dump with name " + path_lammps_dump_out + "..")
    print("-----------------------------------------------")
    ExportLammpsDump(path_lammps_dump_in, path_lammps_dump_out, n_frame, ev_frame, network, mass_of_type, num_of_type)
+
+   ComputeBond(path_lammps_data_out, [1], n_frame, path_lammps_dump_out, lbin=0.006525, verbose=True, debug=True)
+   ComputeBond(path_lammps_data_out, [2], n_frame, path_lammps_dump_out, lbin=0.006525, verbose=True, debug=True)
+   ComputeBond(path_lammps_data_out, [3], n_frame, path_lammps_dump_out, lbin=0.006525, verbose=True, debug=True)
+   ComputeBond(path_lammps_data_out, [4], n_frame, path_lammps_dump_out, lbin=0.006525, verbose=True, debug=True)
+   ComputeAngle(path_lammps_data_out, [1], n_frame, path_lammps_dump_out, lbin=0.01, verbose=True, debug=True)
+   ComputeAngle(path_lammps_data_out, [2], n_frame, path_lammps_dump_out, lbin=0.01, verbose=True, debug=True)
+   ComputeAngle(path_lammps_data_out, [3], n_frame, path_lammps_dump_out, lbin=0.01, verbose=True, debug=True)
+   ComputeAngle(path_lammps_data_out, [4], n_frame, path_lammps_dump_out, lbin=0.01, verbose=True, debug=True)
