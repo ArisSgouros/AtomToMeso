@@ -232,6 +232,37 @@ def ReadGroup(name):
       group.set_btail(btail)
    return group
 
+def ExportGroup(group):
+   with open(group.type, 'w') as foo:
+      foo.write("%d beads\n" % (len(group.beads)))
+      foo.write("%d bonds\n" % (len(group.bonds)))
+      foo.write("\n")
+      foo.write("Beads\n")
+      foo.write("\n")
+      for bid in group.beads:
+         bead = group.beads[bid]
+         foo.write("%d %s" % (bid, bead.type))
+         for aid in bead.aIds:
+            foo.write(" %d" % (aid))
+         foo.write("\n")
+      if group.bonds:
+         foo.write("\n")
+         foo.write("Bonds\n")
+         foo.write("\n")
+         for bond in group.bonds:
+            foo.write("%d %d\n" % (bond[0].bId, bond[1].bId))
+         foo.write("\n")
+      if group.bhead:
+         foo.write("Head %d %d\n" % (group.bhead.bId, group.bhead.ahead))
+      if group.btail:
+         foo.write("Tail %d %d\n" % (group.btail.bId, group.btail.atail))
+      #TODO
+      #if bhead and not ahead:
+      #   print("Warning: head bead w/o head atom")
+      #if btail and not atail:
+      #   print("Warning: tail bead w/o tail atom")
+   return
+
 def PrintNetStat(group):
    print('---',group.type,'---')
    print("nbeads: ", group.nbead)
