@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeBond(path_data, btypes, nFrame, path_dump, lbin, verbose, debug):
+def ComputeBond(path_data, btypes, nFrame, path_dump, export_hist, export_hist_partial, lbin, verbose, debug):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
@@ -142,37 +142,33 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin, verbose, debug):
    mean = np.average(all_segs)
    std = np.std(all_segs)
 
-   bins=[lbin*ii for ii in range(int(max(all_segs)/lbin)+1)]
-   nbins = len(bins)-1
-   st = np.histogram(all_segs, bins=bins)
-   norm_factor = lbin * np.sum(st[0])
+   if export_hist:
+      bins=[lbin*ii for ii in range(int(max(all_segs)/lbin)+1)]
+      nbins = len(bins)-1
+      st = np.histogram(all_segs, bins=bins)
+      norm_factor = lbin * np.sum(st[0])
 
-   f = open("o."+FDESCRIPTION+".bond_dist.dat","w")
-   f.write( " AVE: %16.9f \n" % np.average(all_segs))
-   f.write( " STD: %16.9f \n" % np.std(all_segs))
-   for ibin in range(0,nbins):
-      f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, (float(st[0][ibin]))/norm_factor))
-      #f.write( "%16.9f  %16.9f \n" % (st[1][ibin], (float(st[0][ibin]))/norm_factor))
-   f.close()
+      f = open("o."+FDESCRIPTION+".bond_dist.dat","w")
+      f.write( " AVE: %16.9f \n" % np.average(all_segs))
+      f.write( " STD: %16.9f \n" % np.std(all_segs))
+      for ibin in range(0,nbins):
+         f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, (float(st[0][ibin]))/norm_factor))
+      f.close()
 
-   #
-   # Get the partial bond length distributions
-   #
-
-   st = [None] * nBond
-
-   for aid in range(nBond):
-      aux = []
-      for tt in range(nFrame):
-         aux.append(seg_len[tt][aid])
-      st[aid] = np.histogram(aux, bins=bins)
-
-   f = open("o."+FDESCRIPTION+".bond_dist_partial.dat","w")
-   for ibin in range(nbins):
-      f.write( "%16.9f " % (st[0][1][ibin]+0.5*lbin))
+   if export_hist_partial:
+      st = [None] * nBond
       for aid in range(nBond):
-         f.write( "%d " % (st[aid][0][ibin]))
-      f.write( "\n" )
-   f.close()
+         aux = []
+         for tt in range(nFrame):
+            aux.append(seg_len[tt][aid])
+         st[aid] = np.histogram(aux, bins=bins)
+
+      f = open("o."+FDESCRIPTION+".bond_dist_partial.dat","w")
+      for ibin in range(nbins):
+         f.write( "%16.9f " % (st[0][1][ibin]+0.5*lbin))
+         for aid in range(nBond):
+            f.write( "%d " % (st[aid][0][ibin]))
+         f.write( "\n" )
+      f.close()
 
    return mean, std

@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeAngle(path_data, atypes, nFrame, path_dump, lbin, verbose, debug):
+def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist, export_hist_partial, lbin, verbose, debug):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
@@ -142,41 +142,35 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump, lbin, verbose, debug):
 
    mean = np.average(all_angles)
    std = np.std(all_angles)
-   #
-   # Get the total angle length distributions
-   #
 
-   bins=[lbin*ii for ii in range(0, int(max(all_angles)/lbin)+2)]
-   nbins = len(bins)-1
-   st = np.histogram(all_angles, bins=bins)
+   if export_hist:
+      bins=[lbin*ii for ii in range(0, int(max(all_angles)/lbin)+2)]
+      nbins = len(bins)-1
+      st = np.histogram(all_angles, bins=bins)
 
-   norm_factor = lbin * np.sum(st[0])
+      norm_factor = lbin * np.sum(st[0])
 
-   f = open("o."+FDESCRIPTION+".angle_dist.dat","w")
-   f.write( " AVE: %16.9f \n" % np.average(all_angles))
-   f.write( " STD: %16.9f \n" % np.std(all_angles))
-   for ibin in range(nbins):
-      f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin]) / norm_factor))
-   f.close()
+      f = open("o."+FDESCRIPTION+".angle_dist.dat","w")
+      f.write( " AVE: %16.9f \n" % np.average(all_angles))
+      f.write( " STD: %16.9f \n" % np.std(all_angles))
+      for ibin in range(nbins):
+         f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin]) / norm_factor))
+      f.close()
 
-   #
-   # Get the partial angle length distributions
-   #
-
-   st = [None] * nAngle
-
-   for aid in range(nAngle):
-      aux = []
-      for tt in range(nFrame):
-         aux.append(angles_frame[tt][aid])
-      st[aid] = np.histogram(aux, bins=bins)
-
-   f = open("o."+FDESCRIPTION+".angle_dist_partial.dat","w")
-   for ibin in range(nbins):
-      f.write( "%16.9f " % (st[0][1][ibin]+0.5*lbin))
+   if export_hist_partial:
+      st = [None] * nAngle
       for aid in range(nAngle):
-         f.write( "%d " % (st[aid][0][ibin]))
-      f.write( "\n" )
-   f.close()
+         aux = []
+         for tt in range(nFrame):
+            aux.append(angles_frame[tt][aid])
+         st[aid] = np.histogram(aux, bins=bins)
+
+      f = open("o."+FDESCRIPTION+".angle_dist_partial.dat","w")
+      for ibin in range(nbins):
+         f.write( "%16.9f " % (st[0][1][ibin]+0.5*lbin))
+         for aid in range(nAngle):
+            f.write( "%d " % (st[aid][0][ibin]))
+         f.write( "\n" )
+      f.close()
 
    return mean, std
