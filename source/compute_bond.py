@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeBond(path_data, btypes, nFrame, path_dump):
+def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
@@ -144,7 +144,6 @@ def ComputeBond(path_data, btypes, nFrame, path_dump):
 
    all_segs = [ item for sublist in seg_len for item in sublist ]
 
-   lbin = 0.006525
    bins=[lbin*ii for ii in range(int(max(all_segs)/lbin)+1)]
    nbins = len(bins)-1
    st = np.histogram(all_segs, bins=bins)

@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeAngle(path_data, atypes, nFrame, path_dump):
+def ComputeAngle(path_data, atypes, nFrame, path_dump, lbin):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
@@ -146,8 +146,6 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump):
    #
    # Get the total angle length distributions
    #
-
-   lbin = 0.01
 
    bins=[lbin*ii for ii in range(0, int(max(all_angles)/lbin)+2)]
    nbins = len(bins)-1
