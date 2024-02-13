@@ -36,7 +36,7 @@ if __name__ == "__main__":
    gDGEBF.set_bhead(7)
    gDGEBF.set_btail(1)
    gDGEBF.beads[7].set_ahead(45)
-   gDGEBF.beads[1].set_ahead(1)
+   gDGEBF.beads[1].set_atail(1)
 
 
 
