@@ -68,7 +68,7 @@ def ComputeAngle(path_data, types, nFrame, path_dump, export_hist=False, export_
 
    # Initialize the array of vectors with dimensions:
    # [Nframe x NAngles x 3]
-   angles_frame = [[0.0 for j in range(nAngle)] for j in range(nFrame)]
+   angles_frame = [[0.0 for j in range(nAngle)] for t in range(nFrame)]
    global_list = []
    #
    # Load the atom trajectories
