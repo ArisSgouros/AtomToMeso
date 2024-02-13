@@ -32,10 +32,9 @@ if __name__ == "__main__":
    ExportGroup(gSPE_COPY)
 
    gW = ReadGroup("W")
-
-   # Create the water group
-   #gW = Group("W")
-   #gW.add_bead(1,"W",[1,2,3])
+   gW_COPY = deepcopy(gW)
+   gW_COPY.type = "W_COPY"
+   ExportGroup(gW_COPY)
 
    # Generate chains by merging groups
    print("Generating chains..")
