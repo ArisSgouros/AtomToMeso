@@ -3,14 +3,16 @@ import sys
 import ast
 import numpy as np
 import math as m
+from export import GetDumpFormat
 
 def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_hist_partial=False, lbin=0.1, verbose=False, debug=False):
-   DUMP_COL_ID    = 0
-   DUMP_COL_MOLID = 1
-   DUMP_COL_TYPE  = 2
-   DUMP_COL_X     = 3
-   DUMP_COL_Y     = 4
-   DUMP_COL_Z     = 5
+
+   # Parse the format of the dump file
+   dump_col = GetDumpFormat(path_dump)
+   DUMP_COL_ID = dump_col['id']
+   DUMP_COL_X = dump_col['x']
+   DUMP_COL_Y = dump_col['y']
+   DUMP_COL_Z = dump_col['z']
 
    if verbose: print( "Selected types:",types )
    fname = ("_").join([ str(i) for i in types])
