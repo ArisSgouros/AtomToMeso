@@ -67,7 +67,7 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
 
    # Initialize the array of vectors with dimensions:
    # [Nframe x NBonds x 3]
-   bond_vec = [[[0.0 for d in range(3)] for j in range(nBond)] for t in range(nFrame)]
+   seg_len = [[0.0 for j in range(nBond)] for t in range(nFrame)]
    #
    # Load the atom trajectories
    #
@@ -119,22 +119,9 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
           bondLen1 -= LL1 * round(bondLen1 / LL1)
           bondLen2 -= LL2 * round(bondLen2 / LL2)
 
-          bond_vec[tt][bId]=[bondLen0,bondLen1,bondLen2]
+          seg_len[tt][bId] = m.sqrt(bondLen0*bondLen0 + bondLen1*bondLen1 + bondLen2*bondLen2)
 
           bId += 1
-   #
-   # Get the bond length distributions
-   #
-
-   seg_len = [[None for j in range(nBond)] for j in range(nFrame)]
-   #seg_len = []
-   for bId in range(nBond):
-      for tt in range(nFrame):
-         bond_len = m.sqrt(   bond_vec[tt][bId][0] * bond_vec[tt][bId][0] \
-                            + bond_vec[tt][bId][1] * bond_vec[tt][bId][1] \
-                            + bond_vec[tt][bId][2] * bond_vec[tt][bId][2] )
-
-         seg_len[tt][bId] = bond_len
    f.close()
 
    global_list = [ item for sublist in seg_len for item in sublist ]
