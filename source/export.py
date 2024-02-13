@@ -126,6 +126,18 @@ def ParseLammpsData(path_lammps_data_in, network, atomtype):
    #
    # Read the atom section
    print("Reading atoms section..")
+
+   # Check for existing image flags
+   is_imag = True
+   try:
+      line_split = lines[Atoms_start].split()
+      tmpx = int(line_split[DATA_COL_IX])
+      tmpy = int(line_split[DATA_COL_IY])
+      tmpz = int(line_split[DATA_COL_IZ])
+   except:
+      print("   Nonexisting image flags..")
+      is_imag = False
+
    for ii in range(n_atoms):
       line_split = lines[Atoms_start + ii].split()
 
@@ -137,9 +149,10 @@ def ParseLammpsData(path_lammps_data_in, network, atomtype):
       iat.x     = float(line_split[DATA_COL_X])
       iat.y     = float(line_split[DATA_COL_Y])
       iat.z     = float(line_split[DATA_COL_Z])
-      iat.x     += int(line_split[DATA_COL_IX])*Lx
-      iat.y     += int(line_split[DATA_COL_IY])*Ly
-      iat.z     += int(line_split[DATA_COL_IZ])*Lz
+      if is_imag:
+         iat.x     += int(line_split[DATA_COL_IX])*Lx
+         iat.y     += int(line_split[DATA_COL_IY])*Ly
+         iat.z     += int(line_split[DATA_COL_IZ])*Lz
       atom_list[iat.Id] = deepcopy(iat)
    print()
 
