@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist, export_hist_partial, lbin, verbose, debug):
+def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist=False, export_hist_partial=False, lbin=0.1, verbose=False, debug=False):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
