@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist=False, export_hist_partial=False, lbin=0.1, verbose=False, debug=False):
+def ComputeAngle(path_data, types, nFrame, path_dump, export_hist=False, export_hist_partial=False, lbin=0.1, verbose=False, debug=False):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
@@ -12,8 +12,8 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist=False, export
    DUMP_COL_Y     = 4
    DUMP_COL_Z     = 5
 
-   if verbose: print( "Selected angle types:",atypes )
-   FDESCRIPTION = ("_").join([ str(i) for i in atypes])
+   if verbose: print( "Selected types:",types )
+   FDESCRIPTION = ("_").join([ str(i) for i in types])
 
    fileLines = []
    atomIDs = []
@@ -38,7 +38,7 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist=False, export
 
    for curLine in range(angleLineStart,angleLineEnd):
       curLineSplit = fileLines[curLine].split()
-      if int(curLineSplit[1]) in atypes:
+      if int(curLineSplit[1]) in types:
          angle_ids.append([int(curLineSplit[2]),int(curLineSplit[3]),int(curLineSplit[4])])
          atomIDs.append(int(curLineSplit[2]))
          atomIDs.append(int(curLineSplit[3]))
@@ -69,7 +69,7 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist=False, export
    # Initialize the array of vectors with dimensions:
    # [Nframe x NAngles x 3]
    angles_frame = [[0.0 for j in range(nAngle)] for j in range(nFrame)]
-   all_angles = []
+   global_list = []
    #
    # Load the atom trajectories
    #
@@ -138,21 +138,21 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump, export_hist=False, export
           aid += 1
    f.close()
 
-   all_angles = [ item for sublist in angles_frame for item in sublist ]
+   global_list = [ item for sublist in angles_frame for item in sublist ]
 
-   mean = np.average(all_angles)
-   std = np.std(all_angles)
+   mean = np.average(global_list)
+   std = np.std(global_list)
 
    if export_hist:
-      bins=[lbin*ii for ii in range(0, int(max(all_angles)/lbin)+2)]
+      bins=[lbin*ii for ii in range(0, int(max(global_list)/lbin)+2)]
       nbins = len(bins)-1
-      st = np.histogram(all_angles, bins=bins)
+      st = np.histogram(global_list, bins=bins)
 
       norm_factor = lbin * np.sum(st[0])
 
       f = open("o."+FDESCRIPTION+".angle_dist.dat","w")
-      f.write( " AVE: %16.9f \n" % np.average(all_angles))
-      f.write( " STD: %16.9f \n" % np.std(all_angles))
+      f.write( " AVE: %16.9f \n" % np.average(global_list))
+      f.write( " STD: %16.9f \n" % np.std(global_list))
       for ibin in range(nbins):
          f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin]) / norm_factor))
       f.close()

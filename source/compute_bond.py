@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeBond(path_data, btypes, nFrame, path_dump, export_hist=False, export_hist_partial=False, lbin=0.1, verbose=False, debug=False):
+def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_hist_partial=False, lbin=0.1, verbose=False, debug=False):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
@@ -12,8 +12,8 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, export_hist=False, export_
    DUMP_COL_Y     = 4
    DUMP_COL_Z     = 5
 
-   if verbose: print( "Selected bond types:",btypes )
-   FDESCRIPTION = ("_").join([ str(i) for i in btypes])
+   if verbose: print( "Selected types:",types )
+   FDESCRIPTION = ("_").join([ str(i) for i in types])
 
    fileLines = []
    atomIDs = []
@@ -38,7 +38,7 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, export_hist=False, export_
 
    for curLine in range(bondLineStart,bondLineEnd):
       curLineSplit = fileLines[curLine].split()
-      if int(curLineSplit[1]) in btypes:
+      if int(curLineSplit[1]) in types:
          bonds.append([int(curLineSplit[2]),int(curLineSplit[3])])
          atomIDs.append(int(curLineSplit[2]))
          atomIDs.append(int(curLineSplit[3]))
@@ -67,7 +67,7 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, export_hist=False, export_
 
    # Initialize the array of vectors with dimensions:
    # [Nframe x NBonds x 3]
-   segvec = [[[0.0 for d in range(3)] for j in range(nBond)] for t in range(nFrame)]
+   bond_vec = [[[0.0 for d in range(3)] for j in range(nBond)] for t in range(nFrame)]
    #
    # Load the atom trajectories
    #
@@ -119,7 +119,7 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, export_hist=False, export_
           bondLen1 -= LL1 * round(bondLen1 / LL1)
           bondLen2 -= LL2 * round(bondLen2 / LL2)
 
-          segvec[tt][bId]=[bondLen0,bondLen1,bondLen2]
+          bond_vec[tt][bId]=[bondLen0,bondLen1,bondLen2]
 
           bId += 1
    #
@@ -130,27 +130,27 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, export_hist=False, export_
    #seg_len = []
    for bId in range(nBond):
       for tt in range(nFrame):
-         bond_len = m.sqrt(   segvec[tt][bId][0] * segvec[tt][bId][0] \
-                            + segvec[tt][bId][1] * segvec[tt][bId][1] \
-                            + segvec[tt][bId][2] * segvec[tt][bId][2] )
+         bond_len = m.sqrt(   bond_vec[tt][bId][0] * bond_vec[tt][bId][0] \
+                            + bond_vec[tt][bId][1] * bond_vec[tt][bId][1] \
+                            + bond_vec[tt][bId][2] * bond_vec[tt][bId][2] )
 
          seg_len[tt][bId] = bond_len
    f.close()
 
-   all_segs = [ item for sublist in seg_len for item in sublist ]
+   global_list = [ item for sublist in seg_len for item in sublist ]
 
-   mean = np.average(all_segs)
-   std = np.std(all_segs)
+   mean = np.average(global_list)
+   std = np.std(global_list)
 
    if export_hist:
-      bins=[lbin*ii for ii in range(int(max(all_segs)/lbin)+1)]
+      bins=[lbin*ii for ii in range(int(max(global_list)/lbin)+1)]
       nbins = len(bins)-1
-      st = np.histogram(all_segs, bins=bins)
+      st = np.histogram(global_list, bins=bins)
       norm_factor = lbin * np.sum(st[0])
 
       f = open("o."+FDESCRIPTION+".bond_dist.dat","w")
-      f.write( " AVE: %16.9f \n" % np.average(all_segs))
-      f.write( " STD: %16.9f \n" % np.std(all_segs))
+      f.write( " AVE: %16.9f \n" % np.average(global_list))
+      f.write( " STD: %16.9f \n" % np.std(global_list))
       for ibin in range(0,nbins):
          f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, (float(st[0][ibin]))/norm_factor))
       f.close()
