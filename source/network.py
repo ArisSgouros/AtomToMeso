@@ -174,6 +174,63 @@ class Group():
 
       return left_group
 
+def ReadGroup(name):
+   bead_start = 0
+   bond_start = 0
+   n_bead = 0
+   n_bond = 0
+   bhead = None
+   ahead = None
+   btail = None
+   atail = None
+
+   lines = []
+   with open(name) as foo:
+      iline = 0
+      while True:
+         line = foo.readline()
+         if not line:
+            break
+         if "beads" in line:
+            n_bead = int(line.split()[0])
+         if "bonds" in line:
+            n_bond = int(line.split()[0])
+         if "Beads" in line:
+            bead_start = iline + 2
+         if "Bonds" in line:
+            bond_start = iline + 2
+         if "Head" in line:
+            bhead = int(line.split()[1])
+            ahead = int(line.split()[2])
+         if "Tail" in line:
+            btail = int(line.split()[1])
+            atail = int(line.split()[2])
+         lines.append(line)
+         iline += 1
+
+   group = Group(name)
+   if n_bead:
+      for iline in range(bead_start, bead_start+n_bead):
+         lsplit = lines[iline].split()
+         bid = int(lsplit[0])
+         btype = lsplit[1]
+         atids = [int(ii) for ii in lsplit[2:]]
+         group.add_bead(bid, btype, atids)
+
+   if n_bond:
+      for iline in range(bond_start, bond_start+n_bond):
+         lsplit = lines[iline].split()
+         bi, bj = int(lsplit[0]), int(lsplit[1])
+         group.add_bond(bi, bj)
+
+   if bhead:
+      group.beads[bhead].set_ahead(ahead)
+      group.set_bhead(bhead)
+
+   if btail:
+      group.beads[btail].set_atail(atail)
+      group.set_btail(btail)
+   return group
 
 def PrintNetStat(group):
    print('---',group.type,'---')
