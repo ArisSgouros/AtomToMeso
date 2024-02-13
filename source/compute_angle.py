@@ -13,54 +13,54 @@ def ComputeAngle(path_data, types, nFrame, path_dump, export_hist=False, export_
    DUMP_COL_Z     = 5
 
    if verbose: print( "Selected types:",types )
-   FDESCRIPTION = ("_").join([ str(i) for i in types])
+   fname = ("_").join([ str(i) for i in types])
 
-   fileLines = []
-   atomIDs = []
-   angle_ids = []
+   lines = []
+   atoms = []
+   angles = []
 
    #
    # Read the DATA file and get the connectivity
    #
    if verbose: print( "Reading the connectivity from:",path_data,".." )
 
-   iLine = 0
-   with open(path_data,"r") as openFileObject:
-      for curLine in openFileObject:
-         if "angles" in curLine:
-            nAngles = int(curLine.split()[0])
-         if "Angles" in curLine:
-            angleLineStart = iLine + 2
-            angleLineEnd = angleLineStart + nAngles
+   iline = 0
+   with open(path_data,"r") as foo:
+      for cur_line in foo:
+         if "angles" in cur_line:
+            n_angle_tot = int(cur_line.split()[0])
+         if "Angles" in cur_line:
+            angle_line_start = iline + 2
+            angle_line_end = angle_line_start + n_angle_tot
 
-         fileLines.append(curLine)
-         iLine += 1
+         lines.append(cur_line)
+         iline += 1
 
-   for curLine in range(angleLineStart,angleLineEnd):
-      curLineSplit = fileLines[curLine].split()
-      if int(curLineSplit[1]) in types:
-         angle_ids.append([int(curLineSplit[2]),int(curLineSplit[3]),int(curLineSplit[4])])
-         atomIDs.append(int(curLineSplit[2]))
-         atomIDs.append(int(curLineSplit[3]))
-         atomIDs.append(int(curLineSplit[4]))
+   for cur_line in range(angle_line_start,angle_line_end):
+      lsplit = lines[cur_line].split()
+      if int(lsplit[1]) in types:
+         angles.append([int(lsplit[2]),int(lsplit[3]),int(lsplit[4])])
+         atoms.append(int(lsplit[2]))
+         atoms.append(int(lsplit[3]))
+         atoms.append(int(lsplit[4]))
 
-   nAngle = len(angle_ids)
-   if verbose: print( "A total of",nAngle,"angles were selected" )
+   n_count = len(angles)
+   if verbose: print( "A total of",n_count,"angles were selected" )
    #
    # Print the necessary atom IDs for LAMMPS
    #
    #Sort the list and remove duplicates if any
-   atomIDs = sorted(set(atomIDs))
+   atoms = sorted(set(atoms))
    
    if debug:
       print( "Printing the atom IDs in o.atomIDs.dat.." )
-      f = open('o.'+FDESCRIPTION+'.atomIDs.dat', 'w')
-      for ID in atomIDs:
+      f = open('o.'+fname+'.atomIDs.dat', 'w')
+      for ID in atoms:
          f.write(str(ID)+" ")
       f.close()
       print( "Printing the connectivity in o.angleIDs.dat.." )
-      f = open('o.'+FDESCRIPTION+'.angleIDs.dat', 'w')
-      for angle in angle_ids:
+      f = open('o.'+fname+'.angleIDs.dat', 'w')
+      for angle in angles:
          f.write(str(angle[0]) + " " + str(angle[1]) + " " + str(angle[2]) + "\n")
       f.close()
 
@@ -68,8 +68,8 @@ def ComputeAngle(path_data, types, nFrame, path_dump, export_hist=False, export_
 
    # Initialize the array of vectors with dimensions:
    # [Nframe x NAngles x 3]
-   angles_frame = [[0.0 for j in range(nAngle)] for t in range(nFrame)]
-   global_list = []
+   val_indiv_tt = [[0.0 for j in range(n_count)] for t in range(nFrame)]
+   val_all = []
    #
    # Load the atom trajectories
    #
@@ -110,65 +110,64 @@ def ComputeAngle(path_data, types, nFrame, path_dump, export_hist=False, export_
       # Now lets calculate the angle vectors!
       #
       aid = 0
-      for angle in angle_ids:
+      for angle in angles:
 
-          bond_a0 = pos[angle[0]][0]-pos[angle[1]][0]
-          bond_a1 = pos[angle[0]][1]-pos[angle[1]][1]
-          bond_a2 = pos[angle[0]][2]-pos[angle[1]][2]
-
-          # Lets perform a minimum image just to be sure!
-          bond_a0 -= LL0 * round(bond_a0 / LL0)
-          bond_a1 -= LL1 * round(bond_a1 / LL1)
-          bond_a2 -= LL2 * round(bond_a2 / LL2)
-
-          bond_a_mag = m.sqrt(bond_a0*bond_a0+bond_a1*bond_a1+bond_a2*bond_a2)
-
-          bond_b0 = pos[angle[2]][0]-pos[angle[1]][0]
-          bond_b1 = pos[angle[2]][1]-pos[angle[1]][1]
-          bond_b2 = pos[angle[2]][2]-pos[angle[1]][2]
+          ra0 = pos[angle[0]][0]-pos[angle[1]][0]
+          ra1 = pos[angle[0]][1]-pos[angle[1]][1]
+          ra2 = pos[angle[0]][2]-pos[angle[1]][2]
 
           # Lets perform a minimum image just to be sure!
-          bond_b0 -= LL0 * round(bond_b0 / LL0)
-          bond_b1 -= LL1 * round(bond_b1 / LL1)
-          bond_b2 -= LL2 * round(bond_b2 / LL2)
+          ra0 -= LL0 * round(ra0 / LL0)
+          ra1 -= LL1 * round(ra1 / LL1)
+          ra2 -= LL2 * round(ra2 / LL2)
 
-          bond_b_mag = m.sqrt(bond_b0*bond_b0+bond_b1*bond_b1+bond_b2*bond_b2)
+          ra_mag = m.sqrt(ra0*ra0+ra1*ra1+ra2*ra2)
 
-          angles_frame[tt][aid] = m.acos( (bond_a0*bond_b0 + bond_a1*bond_b1+ bond_a2*bond_b2)  / (bond_a_mag * bond_b_mag) )
+          rb0 = pos[angle[2]][0]-pos[angle[1]][0]
+          rb1 = pos[angle[2]][1]-pos[angle[1]][1]
+          rb2 = pos[angle[2]][2]-pos[angle[1]][2]
+
+          # Lets perform a minimum image just to be sure!
+          rb0 -= LL0 * round(rb0 / LL0)
+          rb1 -= LL1 * round(rb1 / LL1)
+          rb2 -= LL2 * round(rb2 / LL2)
+
+          rb_mag = m.sqrt(rb0*rb0+rb1*rb1+rb2*rb2)
+
+          val_indiv_tt[tt][aid] = m.acos( (ra0*rb0 + ra1*rb1+ ra2*rb2)  / (ra_mag * rb_mag) )
           aid += 1
    f.close()
 
-   global_list = [ item for sublist in angles_frame for item in sublist ]
+   val_all = [ item for sublist in val_indiv_tt for item in sublist ]
 
-   mean = np.average(global_list)
-   std = np.std(global_list)
+   mean = np.average(val_all)
+   std = np.std(val_all)
 
    if export_hist:
-      bins=[lbin*ii for ii in range(0, int(max(global_list)/lbin)+2)]
+      bins=[lbin*ii for ii in range(0, int(max(val_all)/lbin)+2)]
       nbins = len(bins)-1
-      st = np.histogram(global_list, bins=bins)
-
+      st = np.histogram(val_all, bins=bins)
       norm_factor = lbin * np.sum(st[0])
 
-      f = open("o."+FDESCRIPTION+".angle_dist.dat","w")
-      f.write( " AVE: %16.9f \n" % np.average(global_list))
-      f.write( " STD: %16.9f \n" % np.std(global_list))
+      f = open("o."+fname+".angle_dist.dat","w")
+      f.write( " AVE: %16.9f \n" % np.average(val_all))
+      f.write( " STD: %16.9f \n" % np.std(val_all))
       for ibin in range(nbins):
-         f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin]) / norm_factor))
+         f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin])/norm_factor))
       f.close()
 
    if export_hist_partial:
-      st = [None] * nAngle
-      for aid in range(nAngle):
+      st = [None] * n_count
+      for aid in range(n_count):
          aux = []
          for tt in range(nFrame):
-            aux.append(angles_frame[tt][aid])
+            aux.append(val_indiv_tt[tt][aid])
          st[aid] = np.histogram(aux, bins=bins)
 
-      f = open("o."+FDESCRIPTION+".angle_dist_partial.dat","w")
+      f = open("o."+fname+".angle_dist_partial.dat","w")
       for ibin in range(nbins):
          f.write( "%16.9f " % (st[0][1][ibin]+0.5*lbin))
-         for aid in range(nAngle):
+         for aid in range(n_count):
             f.write( "%d " % (st[aid][0][ibin]))
          f.write( "\n" )
       f.close()

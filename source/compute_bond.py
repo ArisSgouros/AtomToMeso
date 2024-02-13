@@ -13,10 +13,10 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
    DUMP_COL_Z     = 5
 
    if verbose: print( "Selected types:",types )
-   FDESCRIPTION = ("_").join([ str(i) for i in types])
+   fname = ("_").join([ str(i) for i in types])
 
-   fileLines = []
-   atomIDs = []
+   lines = []
+   atoms = []
    bonds = []
 
    #
@@ -24,41 +24,41 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
    #
    if verbose: print( "Reading the connectivity from:",path_data,".." )
 
-   iLine = 0
-   with open(path_data,"r") as openFileObject:
-      for curLine in openFileObject:
-         if "bonds" in curLine:
-            nBonds = int(curLine.split()[0])
-         if "Bonds" in curLine:
-            bondLineStart = iLine + 2
-            bondLineEnd = bondLineStart + nBonds
+   iline = 0
+   with open(path_data,"r") as foo:
+      for cur_line in foo:
+         if "bonds" in cur_line:
+            n_bond_tot = int(cur_line.split()[0])
+         if "Bonds" in cur_line:
+            bond_line_start = iline + 2
+            bond_line_end = bond_line_start + n_bond_tot
 
-         fileLines.append(curLine)
-         iLine += 1
+         lines.append(cur_line)
+         iline += 1
 
-   for curLine in range(bondLineStart,bondLineEnd):
-      curLineSplit = fileLines[curLine].split()
-      if int(curLineSplit[1]) in types:
-         bonds.append([int(curLineSplit[2]),int(curLineSplit[3])])
-         atomIDs.append(int(curLineSplit[2]))
-         atomIDs.append(int(curLineSplit[3]))
+   for cur_line in range(bond_line_start,bond_line_end):
+      lsplit = lines[cur_line].split()
+      if int(lsplit[1]) in types:
+         bonds.append([int(lsplit[2]),int(lsplit[3])])
+         atoms.append(int(lsplit[2]))
+         atoms.append(int(lsplit[3]))
 
-   nBond = len(bonds)
-   if verbose: print( "A total of",nBond,"bonds were selected" )
+   n_count = len(bonds)
+   if verbose: print( "A total of",n_count,"bonds were selected" )
    #
    # Print the necessary atom IDs for LAMMPS
    #
    #Sort the list and remove duplicates if any
-   atomIDs = sorted(set(atomIDs))
+   atoms = sorted(set(atoms))
    
    if debug:
       print( "Printing the atom IDs in o.atomIDs.dat.." )
-      f = open('o.'+FDESCRIPTION+'.atomIDs.dat', 'w')
-      for ID in atomIDs:
+      f = open('o.'+fname+'.atomIDs.dat', 'w')
+      for ID in atoms:
          f.write(str(ID)+" ")
       f.close()
       print( "Printing the connectivity in o.bondIDs.dat.." )
-      f = open('o.'+FDESCRIPTION+'.bondIDs.dat', 'w')
+      f = open('o.'+fname+'.bondIDs.dat', 'w')
       for bond in bonds:
          f.write(str(bond[0]) + " " + str(bond[1]) + "\n")
       f.close()
@@ -67,7 +67,7 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
 
    # Initialize the array of vectors with dimensions:
    # [Nframe x NBonds x 3]
-   seg_len = [[0.0 for j in range(nBond)] for t in range(nFrame)]
+   val_indiv_tt = [[0.0 for j in range(n_count)] for t in range(nFrame)]
    #
    # Load the atom trajectories
    #
@@ -107,53 +107,53 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
       #
       # Now lets calculate the bond vectors!
       #
-      bId = 0
+      bid = 0
       for bond in bonds:
 
-          bondLen0 = pos[bond[1]][0]-pos[bond[0]][0]
-          bondLen1 = pos[bond[1]][1]-pos[bond[0]][1]
-          bondLen2 = pos[bond[1]][2]-pos[bond[0]][2]
+          r0 = pos[bond[1]][0]-pos[bond[0]][0]
+          r1 = pos[bond[1]][1]-pos[bond[0]][1]
+          r2 = pos[bond[1]][2]-pos[bond[0]][2]
 
           # Lets perform a minimum image just to be sure!
-          bondLen0 -= LL0 * round(bondLen0 / LL0)
-          bondLen1 -= LL1 * round(bondLen1 / LL1)
-          bondLen2 -= LL2 * round(bondLen2 / LL2)
+          r0 -= LL0 * round(r0 / LL0)
+          r1 -= LL1 * round(r1 / LL1)
+          r2 -= LL2 * round(r2 / LL2)
 
-          seg_len[tt][bId] = m.sqrt(bondLen0*bondLen0 + bondLen1*bondLen1 + bondLen2*bondLen2)
+          val_indiv_tt[tt][bid] = m.sqrt(r0*r0 + r1*r1 + r2*r2)
 
-          bId += 1
+          bid += 1
    f.close()
 
-   global_list = [ item for sublist in seg_len for item in sublist ]
+   val_all = [ item for sublist in val_indiv_tt for item in sublist ]
 
-   mean = np.average(global_list)
-   std = np.std(global_list)
+   mean = np.average(val_all)
+   std = np.std(val_all)
 
    if export_hist:
-      bins=[lbin*ii for ii in range(int(max(global_list)/lbin)+1)]
+      bins=[lbin*ii for ii in range(int(max(val_all)/lbin)+1)]
       nbins = len(bins)-1
-      st = np.histogram(global_list, bins=bins)
+      st = np.histogram(val_all, bins=bins)
       norm_factor = lbin * np.sum(st[0])
 
-      f = open("o."+FDESCRIPTION+".bond_dist.dat","w")
-      f.write( " AVE: %16.9f \n" % np.average(global_list))
-      f.write( " STD: %16.9f \n" % np.std(global_list))
+      f = open("o."+fname+".bond_dist.dat","w")
+      f.write( " AVE: %16.9f \n" % np.average(val_all))
+      f.write( " STD: %16.9f \n" % np.std(val_all))
       for ibin in range(0,nbins):
-         f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, (float(st[0][ibin]))/norm_factor))
+         f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin])/norm_factor))
       f.close()
 
    if export_hist_partial:
-      st = [None] * nBond
-      for aid in range(nBond):
+      st = [None] * n_count
+      for aid in range(n_count):
          aux = []
          for tt in range(nFrame):
-            aux.append(seg_len[tt][aid])
+            aux.append(val_indiv_tt[tt][aid])
          st[aid] = np.histogram(aux, bins=bins)
 
-      f = open("o."+FDESCRIPTION+".bond_dist_partial.dat","w")
+      f = open("o."+fname+".bond_dist_partial.dat","w")
       for ibin in range(nbins):
          f.write( "%16.9f " % (st[0][1][ibin]+0.5*lbin))
-         for aid in range(nBond):
+         for aid in range(n_count):
             f.write( "%d " % (st[aid][0][ibin]))
          f.write( "\n" )
       f.close()
