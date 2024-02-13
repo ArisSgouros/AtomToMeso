@@ -127,7 +127,6 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
           segvec[tt][bId]=[bondLen0,bondLen1,bondLen2]
 
           bId += 1
-   f.close()
    #
    # Get the bond length distributions
    #
@@ -141,8 +140,12 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
                             + segvec[tt][bId][2] * segvec[tt][bId][2] )
 
          seg_len[tt][bId] = bond_len
+   f.close()
 
    all_segs = [ item for sublist in seg_len for item in sublist ]
+
+   mean = np.average(all_segs)
+   std = np.std(all_segs)
 
    bins=[lbin*ii for ii in range(int(max(all_segs)/lbin)+1)]
    nbins = len(bins)-1
@@ -176,3 +179,5 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
          f.write( "%d " % (st[aid][0][ibin]))
       f.write( "\n" )
    f.close()
+
+   return mean, std

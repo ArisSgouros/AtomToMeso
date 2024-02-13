@@ -143,6 +143,8 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump, lbin):
 
    all_angles = [ item for sublist in angles_frame for item in sublist ]
 
+   mean = np.average(all_angles)
+   std = np.std(all_angles)
    #
    # Get the total angle length distributions
    #
@@ -179,3 +181,5 @@ def ComputeAngle(path_data, atypes, nFrame, path_dump, lbin):
          f.write( "%d " % (st[aid][0][ibin]))
       f.write( "\n" )
    f.close()
+
+   return mean, std
