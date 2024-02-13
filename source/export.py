@@ -268,7 +268,6 @@ def ExportLammpsDump(path_dump_in, path_dump_out, n_frame, EV_FRAME, network, ma
    dump_col = GetDumpFormat(path_dump_in)
 
    DUMP_COL_ID = dump_col['id']
-   DUMP_COL_MOLID = dump_col['molid']
    DUMP_COL_TYPE = dump_col['type']
    DUMP_COL_X = dump_col['x']
    DUMP_COL_Y = dump_col['y']
@@ -321,14 +320,13 @@ def ExportLammpsDump(path_dump_in, path_dump_out, n_frame, EV_FRAME, network, ma
       line = fin.readline() # Z
       fout.write(line)
       line = fin.readline() # ITEM: ATOMS id mol type xu yu zu
-      fout.write(line)
+      fout.write("ITEM: ATOMS id mol type x y z\n")
 
       atom_list = {}
       for ii in range(n_atoms):
          line_split = fin.readline().split()
          iat = Atom()
          iat.Id    = int(  line_split[DUMP_COL_ID])
-         iat.molId = int(  line_split[DUMP_COL_MOLID])
          iat.type  = int(  line_split[DUMP_COL_TYPE])
          iat.x     = float(line_split[DUMP_COL_X])
          iat.y     = float(line_split[DUMP_COL_Y])
