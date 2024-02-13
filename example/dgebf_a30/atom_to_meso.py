@@ -4,7 +4,7 @@ sys.path.insert(0, '../../source/')
 
 from copy import deepcopy
 from export import ExportLammpsData, ExportLammpsDump
-from network import Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat
+from network import Atom, BeadBond, BeadAngle, Bead, Group, PrintNetStat, ReadGroup, ExportGroup
 from process import Process
 
 if __name__ == "__main__":
@@ -38,7 +38,8 @@ if __name__ == "__main__":
    gDGEBF.beads[7].set_ahead(45)
    gDGEBF.beads[1].set_atail(1)
 
-
+   # Export the group to file
+   ExportGroup(gDGEBF)
 
    # Generate chains by merging groups
    print("Generating chains..")
