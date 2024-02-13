@@ -4,7 +4,7 @@ import ast
 import numpy as np
 import math as m
 
-def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
+def ComputeBond(path_data, btypes, nFrame, path_dump, lbin, verbose, debug):
    DUMP_COL_ID    = 0
    DUMP_COL_MOLID = 1
    DUMP_COL_TYPE  = 2
@@ -12,7 +12,7 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
    DUMP_COL_Y     = 4
    DUMP_COL_Z     = 5
 
-   print ( "Selected bond types:",btypes )
+   if verbose: print( "Selected bond types:",btypes )
    FDESCRIPTION = ("_").join([ str(i) for i in btypes])
 
    fileLines = []
@@ -22,7 +22,7 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
    #
    # Read the DATA file and get the connectivity
    #
-   print ( "Reading the connectivity from:",path_data,".." )
+   if verbose: print( "Reading the connectivity from:",path_data,".." )
 
    iLine = 0
    with open(path_data,"r") as openFileObject:
@@ -43,32 +43,27 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
          atomIDs.append(int(curLineSplit[2]))
          atomIDs.append(int(curLineSplit[3]))
 
-   #print ( bonds )
-
    nBond = len(bonds)
-   print ( "A total of",nBond,"bonds were selected" )
+   if verbose: print( "A total of",nBond,"bonds were selected" )
    #
    # Print the necessary atom IDs for LAMMPS
    #
    #Sort the list and remove duplicates if any
    atomIDs = sorted(set(atomIDs))
-   #Write the atom IDs in a file
-   f = open('o.'+FDESCRIPTION+'.atomIDs.dat', 'w')
-   for ID in atomIDs:
-       f.write(str(ID)+" ")
-   f.close()
-   print( "Printing the atom IDs in o.atomIDs.dat.." )
-   #
-   # Print the connectivity
-   #
-   f = open('o.'+FDESCRIPTION+'.bondIDs.dat', 'w')
-   for bond in bonds:
-       f.write(str(bond[0]) + " " + str(bond[1]) + "\n")
-   f.close()
-   print( "Printing the connectivity in o.bondIDs.dat.." )
+   
+   if debug:
+      print( "Printing the atom IDs in o.atomIDs.dat.." )
+      f = open('o.'+FDESCRIPTION+'.atomIDs.dat', 'w')
+      for ID in atomIDs:
+         f.write(str(ID)+" ")
+      f.close()
+      print( "Printing the connectivity in o.bondIDs.dat.." )
+      f = open('o.'+FDESCRIPTION+'.bondIDs.dat', 'w')
+      for bond in bonds:
+         f.write(str(bond[0]) + " " + str(bond[1]) + "\n")
+      f.close()
 
-   #Set the number of Frames
-   print( "Number of Frames:",nFrame )
+   if verbose: print( "Number of Frames:",nFrame )
 
    # Initialize the array of vectors with dimensions:
    # [Nframe x NBonds x 3]
@@ -77,15 +72,15 @@ def ComputeBond(path_data, btypes, nFrame, path_dump, lbin):
    # Load the atom trajectories
    #
    f = open(path_dump,"r")
-   print( "Reading the trajectory file",path_dump,".." )
-   #for NFrame in range(20):
+   if verbose: print( "Reading the trajectory file",path_dump,".." )
    for tt in range(nFrame):
 
       f.readline()                # ITEM: TIMESTEP
       Timestep = int(f.readline())
 
-      if (nFrame > 10 and tt % int(nFrame / 10.0) == 0):
-         print( "time step = ", Timestep )
+      if verbose:
+         if (nFrame > 10 and tt % int(nFrame / 10.0) == 0):
+            print( "time step = ", Timestep )
 
       f.readline()                # ITEM: NUMBER OF ATOMS
       nAtoms = int(f.readline())
