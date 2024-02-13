@@ -1,0 +1,6114 @@
+Generating chains..
+-----------------------------------------------
+Base group stats
+-----------------------------------------------
+--- SPE ---
+nbeads:  4
+bIds type ahead atail aIds
+1 SB 41 1 [1, 2, 3, 4, 5, 6, 38, 39, 40, 41]
+2 SO False False [7, 8, 9, 10, 11, 12]
+3 SN False False [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+4 SS False False [28, 29, 30, 31, 32, 33, 34, 35, 36, 37]
+head 1 SB
+tail 1 SB
+bond pairs
+1 2  #  SB SO
+2 3  #  SO SN
+3 4  #  SN SS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+1 W False False [1, 2, 3]
+NO HEADS/TAILS
+NO BONDS
+
+
+-----------------------------------------------
+Local IDs of beads
+-----------------------------------------------
+type len LocalIds
+SB 10 [1, 2, 3, 4, 5, 6, 38, 39, 40, 41]
+SO 6 [7, 8, 9, 10, 11, 12]
+SN 15 [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+SS 10 [28, 29, 30, 31, 32, 33, 34, 35, 36, 37]
+W 3 [1, 2, 3]
+
+-----------------------------------------------
+Generating global IDs & Network stats..
+-----------------------------------------------
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+1 W False False [1, 2, 3]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+2 W False False [4, 5, 6]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+3 W False False [7, 8, 9]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+4 W False False [10, 11, 12]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+5 W False False [13, 14, 15]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+6 W False False [16, 17, 18]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+7 W False False [19, 20, 21]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+8 W False False [22, 23, 24]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+9 W False False [25, 26, 27]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+10 W False False [28, 29, 30]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+11 W False False [31, 32, 33]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+12 W False False [34, 35, 36]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+13 W False False [37, 38, 39]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+14 W False False [40, 41, 42]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+15 W False False [43, 44, 45]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+16 W False False [46, 47, 48]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+17 W False False [49, 50, 51]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+18 W False False [52, 53, 54]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+19 W False False [55, 56, 57]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+20 W False False [58, 59, 60]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+21 W False False [61, 62, 63]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+22 W False False [64, 65, 66]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+23 W False False [67, 68, 69]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+24 W False False [70, 71, 72]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+25 W False False [73, 74, 75]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+26 W False False [76, 77, 78]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+27 W False False [79, 80, 81]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+28 W False False [82, 83, 84]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+29 W False False [85, 86, 87]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+30 W False False [88, 89, 90]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+31 W False False [91, 92, 93]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+32 W False False [94, 95, 96]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+33 W False False [97, 98, 99]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+34 W False False [100, 101, 102]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+35 W False False [103, 104, 105]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+36 W False False [106, 107, 108]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+37 W False False [109, 110, 111]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+38 W False False [112, 113, 114]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+39 W False False [115, 116, 117]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+40 W False False [118, 119, 120]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+41 W False False [121, 122, 123]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+42 W False False [124, 125, 126]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+43 W False False [127, 128, 129]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+44 W False False [130, 131, 132]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+45 W False False [133, 134, 135]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+46 W False False [136, 137, 138]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+47 W False False [139, 140, 141]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+48 W False False [142, 143, 144]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+49 W False False [145, 146, 147]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+50 W False False [148, 149, 150]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+51 W False False [151, 152, 153]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+52 W False False [154, 155, 156]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+53 W False False [157, 158, 159]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+54 W False False [160, 161, 162]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+55 W False False [163, 164, 165]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+56 W False False [166, 167, 168]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+57 W False False [169, 170, 171]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+58 W False False [172, 173, 174]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+59 W False False [175, 176, 177]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+60 W False False [178, 179, 180]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+61 W False False [181, 182, 183]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+62 W False False [184, 185, 186]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+63 W False False [187, 188, 189]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+64 W False False [190, 191, 192]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+65 W False False [193, 194, 195]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+66 W False False [196, 197, 198]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+67 W False False [199, 200, 201]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+68 W False False [202, 203, 204]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+69 W False False [205, 206, 207]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+70 W False False [208, 209, 210]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+71 W False False [211, 212, 213]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+72 W False False [214, 215, 216]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+73 W False False [217, 218, 219]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+74 W False False [220, 221, 222]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+75 W False False [223, 224, 225]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+76 W False False [226, 227, 228]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+77 W False False [229, 230, 231]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+78 W False False [232, 233, 234]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+79 W False False [235, 236, 237]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+80 W False False [238, 239, 240]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+81 W False False [241, 242, 243]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+82 W False False [244, 245, 246]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+83 W False False [247, 248, 249]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+84 W False False [250, 251, 252]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+85 W False False [253, 254, 255]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+86 W False False [256, 257, 258]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+87 W False False [259, 260, 261]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+88 W False False [262, 263, 264]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+89 W False False [265, 266, 267]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+90 W False False [268, 269, 270]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+91 W False False [271, 272, 273]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+92 W False False [274, 275, 276]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+93 W False False [277, 278, 279]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+94 W False False [280, 281, 282]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+95 W False False [283, 284, 285]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+96 W False False [286, 287, 288]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+97 W False False [289, 290, 291]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+98 W False False [292, 293, 294]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+99 W False False [295, 296, 297]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+100 W False False [298, 299, 300]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+101 W False False [301, 302, 303]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+102 W False False [304, 305, 306]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+103 W False False [307, 308, 309]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+104 W False False [310, 311, 312]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+105 W False False [313, 314, 315]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+106 W False False [316, 317, 318]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+107 W False False [319, 320, 321]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+108 W False False [322, 323, 324]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+109 W False False [325, 326, 327]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+110 W False False [328, 329, 330]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+111 W False False [331, 332, 333]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+112 W False False [334, 335, 336]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+113 W False False [337, 338, 339]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+114 W False False [340, 341, 342]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+115 W False False [343, 344, 345]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+116 W False False [346, 347, 348]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+117 W False False [349, 350, 351]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+118 W False False [352, 353, 354]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+119 W False False [355, 356, 357]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+120 W False False [358, 359, 360]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+121 W False False [361, 362, 363]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+122 W False False [364, 365, 366]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+123 W False False [367, 368, 369]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+124 W False False [370, 371, 372]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+125 W False False [373, 374, 375]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+126 W False False [376, 377, 378]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+127 W False False [379, 380, 381]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+128 W False False [382, 383, 384]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+129 W False False [385, 386, 387]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+130 W False False [388, 389, 390]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+131 W False False [391, 392, 393]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+132 W False False [394, 395, 396]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+133 W False False [397, 398, 399]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+134 W False False [400, 401, 402]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+135 W False False [403, 404, 405]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+136 W False False [406, 407, 408]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+137 W False False [409, 410, 411]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+138 W False False [412, 413, 414]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+139 W False False [415, 416, 417]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+140 W False False [418, 419, 420]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+141 W False False [421, 422, 423]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+142 W False False [424, 425, 426]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+143 W False False [427, 428, 429]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+144 W False False [430, 431, 432]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+145 W False False [433, 434, 435]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+146 W False False [436, 437, 438]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+147 W False False [439, 440, 441]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+148 W False False [442, 443, 444]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+149 W False False [445, 446, 447]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+150 W False False [448, 449, 450]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+151 W False False [451, 452, 453]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+152 W False False [454, 455, 456]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+153 W False False [457, 458, 459]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+154 W False False [460, 461, 462]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+155 W False False [463, 464, 465]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+156 W False False [466, 467, 468]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+157 W False False [469, 470, 471]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+158 W False False [472, 473, 474]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+159 W False False [475, 476, 477]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+160 W False False [478, 479, 480]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+161 W False False [481, 482, 483]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+162 W False False [484, 485, 486]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+163 W False False [487, 488, 489]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+164 W False False [490, 491, 492]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+165 W False False [493, 494, 495]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+166 W False False [496, 497, 498]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+167 W False False [499, 500, 501]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+168 W False False [502, 503, 504]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+169 W False False [505, 506, 507]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+170 W False False [508, 509, 510]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+171 W False False [511, 512, 513]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+172 W False False [514, 515, 516]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+173 W False False [517, 518, 519]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+174 W False False [520, 521, 522]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+175 W False False [523, 524, 525]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+176 W False False [526, 527, 528]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+177 W False False [529, 530, 531]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+178 W False False [532, 533, 534]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+179 W False False [535, 536, 537]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+180 W False False [538, 539, 540]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+181 W False False [541, 542, 543]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+182 W False False [544, 545, 546]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+183 W False False [547, 548, 549]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+184 W False False [550, 551, 552]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+185 W False False [553, 554, 555]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+186 W False False [556, 557, 558]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+187 W False False [559, 560, 561]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+188 W False False [562, 563, 564]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+189 W False False [565, 566, 567]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+190 W False False [568, 569, 570]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+191 W False False [571, 572, 573]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+192 W False False [574, 575, 576]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+193 W False False [577, 578, 579]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+194 W False False [580, 581, 582]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+195 W False False [583, 584, 585]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+196 W False False [586, 587, 588]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+197 W False False [589, 590, 591]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+198 W False False [592, 593, 594]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+199 W False False [595, 596, 597]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+200 W False False [598, 599, 600]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+201 W False False [601, 602, 603]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+202 W False False [604, 605, 606]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+203 W False False [607, 608, 609]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+204 W False False [610, 611, 612]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+205 W False False [613, 614, 615]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+206 W False False [616, 617, 618]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+207 W False False [619, 620, 621]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+208 W False False [622, 623, 624]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+209 W False False [625, 626, 627]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+210 W False False [628, 629, 630]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+211 W False False [631, 632, 633]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+212 W False False [634, 635, 636]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+213 W False False [637, 638, 639]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+214 W False False [640, 641, 642]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+215 W False False [643, 644, 645]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+216 W False False [646, 647, 648]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+217 W False False [649, 650, 651]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+218 W False False [652, 653, 654]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+219 W False False [655, 656, 657]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+220 W False False [658, 659, 660]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+221 W False False [661, 662, 663]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+222 W False False [664, 665, 666]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+223 W False False [667, 668, 669]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+224 W False False [670, 671, 672]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+225 W False False [673, 674, 675]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+226 W False False [676, 677, 678]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+227 W False False [679, 680, 681]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+228 W False False [682, 683, 684]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+229 W False False [685, 686, 687]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+230 W False False [688, 689, 690]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+231 W False False [691, 692, 693]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+232 W False False [694, 695, 696]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+233 W False False [697, 698, 699]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+234 W False False [700, 701, 702]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+235 W False False [703, 704, 705]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+236 W False False [706, 707, 708]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+237 W False False [709, 710, 711]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+238 W False False [712, 713, 714]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+239 W False False [715, 716, 717]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+240 W False False [718, 719, 720]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+241 W False False [721, 722, 723]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+242 W False False [724, 725, 726]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+243 W False False [727, 728, 729]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+244 W False False [730, 731, 732]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+245 W False False [733, 734, 735]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+246 W False False [736, 737, 738]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+247 W False False [739, 740, 741]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+248 W False False [742, 743, 744]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+249 W False False [745, 746, 747]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+250 W False False [748, 749, 750]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+251 W False False [751, 752, 753]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+252 W False False [754, 755, 756]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+253 W False False [757, 758, 759]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+254 W False False [760, 761, 762]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+255 W False False [763, 764, 765]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+256 W False False [766, 767, 768]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+257 W False False [769, 770, 771]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+258 W False False [772, 773, 774]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+259 W False False [775, 776, 777]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+260 W False False [778, 779, 780]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+261 W False False [781, 782, 783]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+262 W False False [784, 785, 786]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+263 W False False [787, 788, 789]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+264 W False False [790, 791, 792]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+265 W False False [793, 794, 795]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+266 W False False [796, 797, 798]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+267 W False False [799, 800, 801]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+268 W False False [802, 803, 804]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+269 W False False [805, 806, 807]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+270 W False False [808, 809, 810]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+271 W False False [811, 812, 813]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+272 W False False [814, 815, 816]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+273 W False False [817, 818, 819]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+274 W False False [820, 821, 822]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+275 W False False [823, 824, 825]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+276 W False False [826, 827, 828]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+277 W False False [829, 830, 831]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+278 W False False [832, 833, 834]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+279 W False False [835, 836, 837]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+280 W False False [838, 839, 840]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+281 W False False [841, 842, 843]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+282 W False False [844, 845, 846]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+283 W False False [847, 848, 849]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+284 W False False [850, 851, 852]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+285 W False False [853, 854, 855]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+286 W False False [856, 857, 858]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+287 W False False [859, 860, 861]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+288 W False False [862, 863, 864]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+289 W False False [865, 866, 867]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+290 W False False [868, 869, 870]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+291 W False False [871, 872, 873]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+292 W False False [874, 875, 876]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+293 W False False [877, 878, 879]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+294 W False False [880, 881, 882]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+295 W False False [883, 884, 885]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+296 W False False [886, 887, 888]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+297 W False False [889, 890, 891]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+298 W False False [892, 893, 894]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+299 W False False [895, 896, 897]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+300 W False False [898, 899, 900]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+301 W False False [901, 902, 903]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+302 W False False [904, 905, 906]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+303 W False False [907, 908, 909]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+304 W False False [910, 911, 912]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+305 W False False [913, 914, 915]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+306 W False False [916, 917, 918]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+307 W False False [919, 920, 921]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+308 W False False [922, 923, 924]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+309 W False False [925, 926, 927]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+310 W False False [928, 929, 930]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+311 W False False [931, 932, 933]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+312 W False False [934, 935, 936]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+313 W False False [937, 938, 939]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+314 W False False [940, 941, 942]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+315 W False False [943, 944, 945]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+316 W False False [946, 947, 948]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+317 W False False [949, 950, 951]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+318 W False False [952, 953, 954]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+319 W False False [955, 956, 957]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+320 W False False [958, 959, 960]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+321 W False False [961, 962, 963]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+322 W False False [964, 965, 966]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+323 W False False [967, 968, 969]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+324 W False False [970, 971, 972]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+325 W False False [973, 974, 975]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+326 W False False [976, 977, 978]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+327 W False False [979, 980, 981]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+328 W False False [982, 983, 984]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+329 W False False [985, 986, 987]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+330 W False False [988, 989, 990]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+331 W False False [991, 992, 993]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+332 W False False [994, 995, 996]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+333 W False False [997, 998, 999]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+334 W False False [1000, 1001, 1002]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+335 W False False [1003, 1004, 1005]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+336 W False False [1006, 1007, 1008]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+337 W False False [1009, 1010, 1011]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+338 W False False [1012, 1013, 1014]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+339 W False False [1015, 1016, 1017]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+340 W False False [1018, 1019, 1020]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+341 W False False [1021, 1022, 1023]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+342 W False False [1024, 1025, 1026]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+343 W False False [1027, 1028, 1029]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+344 W False False [1030, 1031, 1032]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+345 W False False [1033, 1034, 1035]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+346 W False False [1036, 1037, 1038]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+347 W False False [1039, 1040, 1041]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+348 W False False [1042, 1043, 1044]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+349 W False False [1045, 1046, 1047]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+350 W False False [1048, 1049, 1050]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+351 W False False [1051, 1052, 1053]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+352 W False False [1054, 1055, 1056]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+353 W False False [1057, 1058, 1059]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+354 W False False [1060, 1061, 1062]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+355 W False False [1063, 1064, 1065]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+356 W False False [1066, 1067, 1068]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+357 W False False [1069, 1070, 1071]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+358 W False False [1072, 1073, 1074]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+359 W False False [1075, 1076, 1077]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+360 W False False [1078, 1079, 1080]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+361 W False False [1081, 1082, 1083]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+362 W False False [1084, 1085, 1086]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+363 W False False [1087, 1088, 1089]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+364 W False False [1090, 1091, 1092]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+365 W False False [1093, 1094, 1095]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+366 W False False [1096, 1097, 1098]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+367 W False False [1099, 1100, 1101]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+368 W False False [1102, 1103, 1104]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+369 W False False [1105, 1106, 1107]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+370 W False False [1108, 1109, 1110]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+371 W False False [1111, 1112, 1113]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+372 W False False [1114, 1115, 1116]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+373 W False False [1117, 1118, 1119]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+374 W False False [1120, 1121, 1122]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+375 W False False [1123, 1124, 1125]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+376 W False False [1126, 1127, 1128]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+377 W False False [1129, 1130, 1131]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+378 W False False [1132, 1133, 1134]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+379 W False False [1135, 1136, 1137]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+380 W False False [1138, 1139, 1140]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+381 W False False [1141, 1142, 1143]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+382 W False False [1144, 1145, 1146]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+383 W False False [1147, 1148, 1149]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+384 W False False [1150, 1151, 1152]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+385 W False False [1153, 1154, 1155]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+386 W False False [1156, 1157, 1158]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+387 W False False [1159, 1160, 1161]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+388 W False False [1162, 1163, 1164]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+389 W False False [1165, 1166, 1167]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+390 W False False [1168, 1169, 1170]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+391 W False False [1171, 1172, 1173]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+392 W False False [1174, 1175, 1176]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+393 W False False [1177, 1178, 1179]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+394 W False False [1180, 1181, 1182]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+395 W False False [1183, 1184, 1185]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+396 W False False [1186, 1187, 1188]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+397 W False False [1189, 1190, 1191]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+398 W False False [1192, 1193, 1194]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+399 W False False [1195, 1196, 1197]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+400 W False False [1198, 1199, 1200]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+401 W False False [1201, 1202, 1203]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+402 W False False [1204, 1205, 1206]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+403 W False False [1207, 1208, 1209]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+404 W False False [1210, 1211, 1212]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+405 W False False [1213, 1214, 1215]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+406 W False False [1216, 1217, 1218]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+407 W False False [1219, 1220, 1221]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+408 W False False [1222, 1223, 1224]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+409 W False False [1225, 1226, 1227]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+410 W False False [1228, 1229, 1230]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+411 W False False [1231, 1232, 1233]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+412 W False False [1234, 1235, 1236]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+413 W False False [1237, 1238, 1239]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+414 W False False [1240, 1241, 1242]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+415 W False False [1243, 1244, 1245]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+416 W False False [1246, 1247, 1248]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+417 W False False [1249, 1250, 1251]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+418 W False False [1252, 1253, 1254]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+419 W False False [1255, 1256, 1257]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+420 W False False [1258, 1259, 1260]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+421 W False False [1261, 1262, 1263]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+422 W False False [1264, 1265, 1266]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+423 W False False [1267, 1268, 1269]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+424 W False False [1270, 1271, 1272]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+425 W False False [1273, 1274, 1275]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+426 W False False [1276, 1277, 1278]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+427 W False False [1279, 1280, 1281]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+428 W False False [1282, 1283, 1284]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+429 W False False [1285, 1286, 1287]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+430 W False False [1288, 1289, 1290]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+431 W False False [1291, 1292, 1293]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+432 W False False [1294, 1295, 1296]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+433 W False False [1297, 1298, 1299]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+434 W False False [1300, 1301, 1302]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+435 W False False [1303, 1304, 1305]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+436 W False False [1306, 1307, 1308]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+437 W False False [1309, 1310, 1311]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+438 W False False [1312, 1313, 1314]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+439 W False False [1315, 1316, 1317]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+440 W False False [1318, 1319, 1320]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+441 W False False [1321, 1322, 1323]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+442 W False False [1324, 1325, 1326]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+443 W False False [1327, 1328, 1329]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+444 W False False [1330, 1331, 1332]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+445 W False False [1333, 1334, 1335]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+446 W False False [1336, 1337, 1338]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+447 W False False [1339, 1340, 1341]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+448 W False False [1342, 1343, 1344]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+449 W False False [1345, 1346, 1347]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+450 W False False [1348, 1349, 1350]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+451 W False False [1351, 1352, 1353]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+452 W False False [1354, 1355, 1356]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+453 W False False [1357, 1358, 1359]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+454 W False False [1360, 1361, 1362]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+455 W False False [1363, 1364, 1365]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+456 W False False [1366, 1367, 1368]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+457 W False False [1369, 1370, 1371]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+458 W False False [1372, 1373, 1374]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+459 W False False [1375, 1376, 1377]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+460 W False False [1378, 1379, 1380]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+461 W False False [1381, 1382, 1383]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+462 W False False [1384, 1385, 1386]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+463 W False False [1387, 1388, 1389]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+464 W False False [1390, 1391, 1392]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+465 W False False [1393, 1394, 1395]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+466 W False False [1396, 1397, 1398]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+467 W False False [1399, 1400, 1401]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+468 W False False [1402, 1403, 1404]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+469 W False False [1405, 1406, 1407]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+470 W False False [1408, 1409, 1410]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+471 W False False [1411, 1412, 1413]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+472 W False False [1414, 1415, 1416]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+473 W False False [1417, 1418, 1419]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+474 W False False [1420, 1421, 1422]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+475 W False False [1423, 1424, 1425]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+476 W False False [1426, 1427, 1428]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+477 W False False [1429, 1430, 1431]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+478 W False False [1432, 1433, 1434]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+479 W False False [1435, 1436, 1437]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+480 W False False [1438, 1439, 1440]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+481 W False False [1441, 1442, 1443]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+482 W False False [1444, 1445, 1446]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+483 W False False [1447, 1448, 1449]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+484 W False False [1450, 1451, 1452]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+485 W False False [1453, 1454, 1455]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+486 W False False [1456, 1457, 1458]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+487 W False False [1459, 1460, 1461]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+488 W False False [1462, 1463, 1464]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+489 W False False [1465, 1466, 1467]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+490 W False False [1468, 1469, 1470]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+491 W False False [1471, 1472, 1473]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+492 W False False [1474, 1475, 1476]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+493 W False False [1477, 1478, 1479]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+494 W False False [1480, 1481, 1482]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+495 W False False [1483, 1484, 1485]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+496 W False False [1486, 1487, 1488]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+497 W False False [1489, 1490, 1491]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+498 W False False [1492, 1493, 1494]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+499 W False False [1495, 1496, 1497]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+500 W False False [1498, 1499, 1500]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+501 W False False [1501, 1502, 1503]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+502 W False False [1504, 1505, 1506]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+503 W False False [1507, 1508, 1509]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+504 W False False [1510, 1511, 1512]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+505 W False False [1513, 1514, 1515]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+506 W False False [1516, 1517, 1518]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+507 W False False [1519, 1520, 1521]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+508 W False False [1522, 1523, 1524]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+509 W False False [1525, 1526, 1527]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+510 W False False [1528, 1529, 1530]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+511 W False False [1531, 1532, 1533]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+512 W False False [1534, 1535, 1536]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+513 W False False [1537, 1538, 1539]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+514 W False False [1540, 1541, 1542]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+515 W False False [1543, 1544, 1545]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+516 W False False [1546, 1547, 1548]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+517 W False False [1549, 1550, 1551]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+518 W False False [1552, 1553, 1554]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+519 W False False [1555, 1556, 1557]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+520 W False False [1558, 1559, 1560]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+521 W False False [1561, 1562, 1563]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+522 W False False [1564, 1565, 1566]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+523 W False False [1567, 1568, 1569]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+524 W False False [1570, 1571, 1572]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+525 W False False [1573, 1574, 1575]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+526 W False False [1576, 1577, 1578]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+527 W False False [1579, 1580, 1581]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+528 W False False [1582, 1583, 1584]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+529 W False False [1585, 1586, 1587]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+530 W False False [1588, 1589, 1590]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+531 W False False [1591, 1592, 1593]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+532 W False False [1594, 1595, 1596]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+533 W False False [1597, 1598, 1599]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+534 W False False [1600, 1601, 1602]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+535 W False False [1603, 1604, 1605]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+536 W False False [1606, 1607, 1608]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+537 W False False [1609, 1610, 1611]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+538 W False False [1612, 1613, 1614]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+539 W False False [1615, 1616, 1617]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+540 W False False [1618, 1619, 1620]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+541 W False False [1621, 1622, 1623]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+542 W False False [1624, 1625, 1626]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+543 W False False [1627, 1628, 1629]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+544 W False False [1630, 1631, 1632]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+545 W False False [1633, 1634, 1635]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+546 W False False [1636, 1637, 1638]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+547 W False False [1639, 1640, 1641]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+548 W False False [1642, 1643, 1644]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+549 W False False [1645, 1646, 1647]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+550 W False False [1648, 1649, 1650]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+551 W False False [1651, 1652, 1653]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+552 W False False [1654, 1655, 1656]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+553 W False False [1657, 1658, 1659]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+554 W False False [1660, 1661, 1662]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+555 W False False [1663, 1664, 1665]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+556 W False False [1666, 1667, 1668]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+557 W False False [1669, 1670, 1671]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+558 W False False [1672, 1673, 1674]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+559 W False False [1675, 1676, 1677]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+560 W False False [1678, 1679, 1680]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+561 W False False [1681, 1682, 1683]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+562 W False False [1684, 1685, 1686]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+563 W False False [1687, 1688, 1689]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+564 W False False [1690, 1691, 1692]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+565 W False False [1693, 1694, 1695]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+566 W False False [1696, 1697, 1698]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+567 W False False [1699, 1700, 1701]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+568 W False False [1702, 1703, 1704]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+569 W False False [1705, 1706, 1707]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+570 W False False [1708, 1709, 1710]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+571 W False False [1711, 1712, 1713]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+572 W False False [1714, 1715, 1716]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+573 W False False [1717, 1718, 1719]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+574 W False False [1720, 1721, 1722]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+575 W False False [1723, 1724, 1725]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+576 W False False [1726, 1727, 1728]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+577 W False False [1729, 1730, 1731]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+578 W False False [1732, 1733, 1734]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+579 W False False [1735, 1736, 1737]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+580 W False False [1738, 1739, 1740]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+581 W False False [1741, 1742, 1743]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+582 W False False [1744, 1745, 1746]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+583 W False False [1747, 1748, 1749]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+584 W False False [1750, 1751, 1752]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+585 W False False [1753, 1754, 1755]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+586 W False False [1756, 1757, 1758]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+587 W False False [1759, 1760, 1761]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+588 W False False [1762, 1763, 1764]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+589 W False False [1765, 1766, 1767]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+590 W False False [1768, 1769, 1770]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+591 W False False [1771, 1772, 1773]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+592 W False False [1774, 1775, 1776]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+593 W False False [1777, 1778, 1779]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+594 W False False [1780, 1781, 1782]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+595 W False False [1783, 1784, 1785]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+596 W False False [1786, 1787, 1788]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+597 W False False [1789, 1790, 1791]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+598 W False False [1792, 1793, 1794]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+599 W False False [1795, 1796, 1797]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+600 W False False [1798, 1799, 1800]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+601 W False False [1801, 1802, 1803]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+602 W False False [1804, 1805, 1806]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+603 W False False [1807, 1808, 1809]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+604 W False False [1810, 1811, 1812]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+605 W False False [1813, 1814, 1815]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+606 W False False [1816, 1817, 1818]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+607 W False False [1819, 1820, 1821]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+608 W False False [1822, 1823, 1824]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+609 W False False [1825, 1826, 1827]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+610 W False False [1828, 1829, 1830]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+611 W False False [1831, 1832, 1833]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+612 W False False [1834, 1835, 1836]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+613 W False False [1837, 1838, 1839]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+614 W False False [1840, 1841, 1842]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+615 W False False [1843, 1844, 1845]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+616 W False False [1846, 1847, 1848]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+617 W False False [1849, 1850, 1851]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+618 W False False [1852, 1853, 1854]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+619 W False False [1855, 1856, 1857]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+620 W False False [1858, 1859, 1860]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+621 W False False [1861, 1862, 1863]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+622 W False False [1864, 1865, 1866]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+623 W False False [1867, 1868, 1869]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+624 W False False [1870, 1871, 1872]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+625 W False False [1873, 1874, 1875]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+626 W False False [1876, 1877, 1878]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+627 W False False [1879, 1880, 1881]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+628 W False False [1882, 1883, 1884]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+629 W False False [1885, 1886, 1887]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+630 W False False [1888, 1889, 1890]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+631 W False False [1891, 1892, 1893]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+632 W False False [1894, 1895, 1896]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+633 W False False [1897, 1898, 1899]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+634 W False False [1900, 1901, 1902]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+635 W False False [1903, 1904, 1905]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+636 W False False [1906, 1907, 1908]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+637 W False False [1909, 1910, 1911]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+638 W False False [1912, 1913, 1914]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+639 W False False [1915, 1916, 1917]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+640 W False False [1918, 1919, 1920]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+641 W False False [1921, 1922, 1923]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+642 W False False [1924, 1925, 1926]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+643 W False False [1927, 1928, 1929]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+644 W False False [1930, 1931, 1932]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+645 W False False [1933, 1934, 1935]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+646 W False False [1936, 1937, 1938]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+647 W False False [1939, 1940, 1941]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+648 W False False [1942, 1943, 1944]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+649 W False False [1945, 1946, 1947]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+650 W False False [1948, 1949, 1950]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+651 W False False [1951, 1952, 1953]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+652 W False False [1954, 1955, 1956]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+653 W False False [1957, 1958, 1959]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+654 W False False [1960, 1961, 1962]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+655 W False False [1963, 1964, 1965]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+656 W False False [1966, 1967, 1968]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+657 W False False [1969, 1970, 1971]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+658 W False False [1972, 1973, 1974]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+659 W False False [1975, 1976, 1977]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+660 W False False [1978, 1979, 1980]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+661 W False False [1981, 1982, 1983]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+662 W False False [1984, 1985, 1986]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+663 W False False [1987, 1988, 1989]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+664 W False False [1990, 1991, 1992]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+665 W False False [1993, 1994, 1995]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+666 W False False [1996, 1997, 1998]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+667 W False False [1999, 2000, 2001]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+668 W False False [2002, 2003, 2004]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+669 W False False [2005, 2006, 2007]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+670 W False False [2008, 2009, 2010]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+671 W False False [2011, 2012, 2013]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+672 W False False [2014, 2015, 2016]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+673 W False False [2017, 2018, 2019]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+674 W False False [2020, 2021, 2022]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+675 W False False [2023, 2024, 2025]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+676 W False False [2026, 2027, 2028]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+677 W False False [2029, 2030, 2031]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+678 W False False [2032, 2033, 2034]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+679 W False False [2035, 2036, 2037]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+680 W False False [2038, 2039, 2040]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+681 W False False [2041, 2042, 2043]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+682 W False False [2044, 2045, 2046]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+683 W False False [2047, 2048, 2049]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+684 W False False [2050, 2051, 2052]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+685 W False False [2053, 2054, 2055]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+686 W False False [2056, 2057, 2058]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+687 W False False [2059, 2060, 2061]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+688 W False False [2062, 2063, 2064]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+689 W False False [2065, 2066, 2067]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+690 W False False [2068, 2069, 2070]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+691 W False False [2071, 2072, 2073]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+692 W False False [2074, 2075, 2076]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+693 W False False [2077, 2078, 2079]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+694 W False False [2080, 2081, 2082]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+695 W False False [2083, 2084, 2085]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+696 W False False [2086, 2087, 2088]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+697 W False False [2089, 2090, 2091]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+698 W False False [2092, 2093, 2094]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+699 W False False [2095, 2096, 2097]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+700 W False False [2098, 2099, 2100]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+701 W False False [2101, 2102, 2103]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+702 W False False [2104, 2105, 2106]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+703 W False False [2107, 2108, 2109]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+704 W False False [2110, 2111, 2112]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+705 W False False [2113, 2114, 2115]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+706 W False False [2116, 2117, 2118]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+707 W False False [2119, 2120, 2121]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+708 W False False [2122, 2123, 2124]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+709 W False False [2125, 2126, 2127]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+710 W False False [2128, 2129, 2130]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+711 W False False [2131, 2132, 2133]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+712 W False False [2134, 2135, 2136]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+713 W False False [2137, 2138, 2139]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+714 W False False [2140, 2141, 2142]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+715 W False False [2143, 2144, 2145]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+716 W False False [2146, 2147, 2148]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+717 W False False [2149, 2150, 2151]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+718 W False False [2152, 2153, 2154]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+719 W False False [2155, 2156, 2157]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+720 W False False [2158, 2159, 2160]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+721 W False False [2161, 2162, 2163]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+722 W False False [2164, 2165, 2166]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+723 W False False [2167, 2168, 2169]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+724 W False False [2170, 2171, 2172]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+725 W False False [2173, 2174, 2175]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+726 W False False [2176, 2177, 2178]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+727 W False False [2179, 2180, 2181]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+728 W False False [2182, 2183, 2184]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+729 W False False [2185, 2186, 2187]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+730 W False False [2188, 2189, 2190]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+731 W False False [2191, 2192, 2193]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+732 W False False [2194, 2195, 2196]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+733 W False False [2197, 2198, 2199]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+734 W False False [2200, 2201, 2202]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+735 W False False [2203, 2204, 2205]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+736 W False False [2206, 2207, 2208]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+737 W False False [2209, 2210, 2211]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+738 W False False [2212, 2213, 2214]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+739 W False False [2215, 2216, 2217]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+740 W False False [2218, 2219, 2220]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+741 W False False [2221, 2222, 2223]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+742 W False False [2224, 2225, 2226]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+743 W False False [2227, 2228, 2229]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+744 W False False [2230, 2231, 2232]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+745 W False False [2233, 2234, 2235]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+746 W False False [2236, 2237, 2238]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+747 W False False [2239, 2240, 2241]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+748 W False False [2242, 2243, 2244]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+749 W False False [2245, 2246, 2247]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+750 W False False [2248, 2249, 2250]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+751 W False False [2251, 2252, 2253]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+752 W False False [2254, 2255, 2256]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+753 W False False [2257, 2258, 2259]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+754 W False False [2260, 2261, 2262]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+755 W False False [2263, 2264, 2265]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+756 W False False [2266, 2267, 2268]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+757 W False False [2269, 2270, 2271]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+758 W False False [2272, 2273, 2274]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+759 W False False [2275, 2276, 2277]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+760 W False False [2278, 2279, 2280]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+761 W False False [2281, 2282, 2283]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+762 W False False [2284, 2285, 2286]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+763 W False False [2287, 2288, 2289]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+764 W False False [2290, 2291, 2292]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+765 W False False [2293, 2294, 2295]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+766 W False False [2296, 2297, 2298]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+767 W False False [2299, 2300, 2301]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+768 W False False [2302, 2303, 2304]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+769 W False False [2305, 2306, 2307]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+770 W False False [2308, 2309, 2310]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+771 W False False [2311, 2312, 2313]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+772 W False False [2314, 2315, 2316]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+773 W False False [2317, 2318, 2319]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+774 W False False [2320, 2321, 2322]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+775 W False False [2323, 2324, 2325]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+776 W False False [2326, 2327, 2328]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+777 W False False [2329, 2330, 2331]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+778 W False False [2332, 2333, 2334]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+779 W False False [2335, 2336, 2337]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+780 W False False [2338, 2339, 2340]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+781 W False False [2341, 2342, 2343]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+782 W False False [2344, 2345, 2346]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+783 W False False [2347, 2348, 2349]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+784 W False False [2350, 2351, 2352]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+785 W False False [2353, 2354, 2355]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+786 W False False [2356, 2357, 2358]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+787 W False False [2359, 2360, 2361]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+788 W False False [2362, 2363, 2364]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+789 W False False [2365, 2366, 2367]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+790 W False False [2368, 2369, 2370]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+791 W False False [2371, 2372, 2373]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+792 W False False [2374, 2375, 2376]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+793 W False False [2377, 2378, 2379]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+794 W False False [2380, 2381, 2382]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+795 W False False [2383, 2384, 2385]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+796 W False False [2386, 2387, 2388]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+797 W False False [2389, 2390, 2391]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+798 W False False [2392, 2393, 2394]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+799 W False False [2395, 2396, 2397]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+800 W False False [2398, 2399, 2400]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+801 W False False [2401, 2402, 2403]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+802 W False False [2404, 2405, 2406]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+803 W False False [2407, 2408, 2409]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+804 W False False [2410, 2411, 2412]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+805 W False False [2413, 2414, 2415]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+806 W False False [2416, 2417, 2418]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+807 W False False [2419, 2420, 2421]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+808 W False False [2422, 2423, 2424]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+809 W False False [2425, 2426, 2427]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+810 W False False [2428, 2429, 2430]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+811 W False False [2431, 2432, 2433]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+812 W False False [2434, 2435, 2436]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+813 W False False [2437, 2438, 2439]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+814 W False False [2440, 2441, 2442]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+815 W False False [2443, 2444, 2445]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+816 W False False [2446, 2447, 2448]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+817 W False False [2449, 2450, 2451]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+818 W False False [2452, 2453, 2454]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+819 W False False [2455, 2456, 2457]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+820 W False False [2458, 2459, 2460]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+821 W False False [2461, 2462, 2463]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+822 W False False [2464, 2465, 2466]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+823 W False False [2467, 2468, 2469]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+824 W False False [2470, 2471, 2472]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+825 W False False [2473, 2474, 2475]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+826 W False False [2476, 2477, 2478]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+827 W False False [2479, 2480, 2481]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+828 W False False [2482, 2483, 2484]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+829 W False False [2485, 2486, 2487]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+830 W False False [2488, 2489, 2490]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+831 W False False [2491, 2492, 2493]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+832 W False False [2494, 2495, 2496]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+833 W False False [2497, 2498, 2499]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+834 W False False [2500, 2501, 2502]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+835 W False False [2503, 2504, 2505]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+836 W False False [2506, 2507, 2508]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+837 W False False [2509, 2510, 2511]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+838 W False False [2512, 2513, 2514]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+839 W False False [2515, 2516, 2517]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+840 W False False [2518, 2519, 2520]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+841 W False False [2521, 2522, 2523]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+842 W False False [2524, 2525, 2526]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+843 W False False [2527, 2528, 2529]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+844 W False False [2530, 2531, 2532]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+845 W False False [2533, 2534, 2535]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+846 W False False [2536, 2537, 2538]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+847 W False False [2539, 2540, 2541]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+848 W False False [2542, 2543, 2544]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+849 W False False [2545, 2546, 2547]
+NO HEADS/TAILS
+NO BONDS
+
+--- W ---
+nbeads:  1
+bIds type ahead atail aIds
+850 W False False [2548, 2549, 2550]
+NO HEADS/TAILS
+NO BONDS
+
+--- SPE-SPE-SPE-SPE-SPE-SPE-SPE-SPE ---
+nbeads:  32
+bIds type ahead atail aIds
+851 SB False 2551 [2551, 2552, 2553, 2554, 2555, 2556, 2588, 2589, 2590]
+852 SO False False [2557, 2558, 2559, 2560, 2561, 2562]
+853 SN False False [2563, 2564, 2565, 2566, 2567, 2568, 2569, 2570, 2571, 2572, 2573, 2574, 2575, 2576, 2577]
+854 SS False False [2578, 2579, 2580, 2581, 2582, 2583, 2584, 2585, 2586, 2587]
+855 SB False False [2591, 2592, 2593, 2594, 2595, 2627, 2628, 2629]
+856 SO False False [2596, 2597, 2598, 2599, 2600, 2601]
+857 SN False False [2602, 2603, 2604, 2605, 2606, 2607, 2608, 2609, 2610, 2611, 2612, 2613, 2614, 2615, 2616]
+858 SS False False [2617, 2618, 2619, 2620, 2621, 2622, 2623, 2624, 2625, 2626]
+859 SB False False [2630, 2631, 2632, 2633, 2634, 2666, 2667, 2668]
+860 SO False False [2635, 2636, 2637, 2638, 2639, 2640]
+861 SN False False [2641, 2642, 2643, 2644, 2645, 2646, 2647, 2648, 2649, 2650, 2651, 2652, 2653, 2654, 2655]
+862 SS False False [2656, 2657, 2658, 2659, 2660, 2661, 2662, 2663, 2664, 2665]
+863 SB False False [2669, 2670, 2671, 2672, 2673, 2705, 2706, 2707]
+864 SO False False [2674, 2675, 2676, 2677, 2678, 2679]
+865 SN False False [2680, 2681, 2682, 2683, 2684, 2685, 2686, 2687, 2688, 2689, 2690, 2691, 2692, 2693, 2694]
+866 SS False False [2695, 2696, 2697, 2698, 2699, 2700, 2701, 2702, 2703, 2704]
+867 SB False False [2708, 2709, 2710, 2711, 2712, 2744, 2745, 2746]
+868 SO False False [2713, 2714, 2715, 2716, 2717, 2718]
+869 SN False False [2719, 2720, 2721, 2722, 2723, 2724, 2725, 2726, 2727, 2728, 2729, 2730, 2731, 2732, 2733]
+870 SS False False [2734, 2735, 2736, 2737, 2738, 2739, 2740, 2741, 2742, 2743]
+871 SB False False [2747, 2748, 2749, 2750, 2751, 2783, 2784, 2785]
+872 SO False False [2752, 2753, 2754, 2755, 2756, 2757]
+873 SN False False [2758, 2759, 2760, 2761, 2762, 2763, 2764, 2765, 2766, 2767, 2768, 2769, 2770, 2771, 2772]
+874 SS False False [2773, 2774, 2775, 2776, 2777, 2778, 2779, 2780, 2781, 2782]
+875 SB False False [2786, 2787, 2788, 2789, 2790, 2822, 2823, 2824]
+876 SO False False [2791, 2792, 2793, 2794, 2795, 2796]
+877 SN False False [2797, 2798, 2799, 2800, 2801, 2802, 2803, 2804, 2805, 2806, 2807, 2808, 2809, 2810, 2811]
+878 SS False False [2812, 2813, 2814, 2815, 2816, 2817, 2818, 2819, 2820, 2821]
+879 SB 2864 False [2825, 2826, 2827, 2828, 2829, 2861, 2862, 2863, 2864]
+880 SO False False [2830, 2831, 2832, 2833, 2834, 2835]
+881 SN False False [2836, 2837, 2838, 2839, 2840, 2841, 2842, 2843, 2844, 2845, 2846, 2847, 2848, 2849, 2850]
+882 SS False False [2851, 2852, 2853, 2854, 2855, 2856, 2857, 2858, 2859, 2860]
+head 879 SB
+tail 851 SB
+bond pairs
+851 852  #  SB SO
+852 853  #  SO SN
+853 854  #  SN SS
+851 855  #  SB SB
+855 856  #  SB SO
+856 857  #  SO SN
+857 858  #  SN SS
+855 859  #  SB SB
+859 860  #  SB SO
+860 861  #  SO SN
+861 862  #  SN SS
+859 863  #  SB SB
+863 864  #  SB SO
+864 865  #  SO SN
+865 866  #  SN SS
+863 867  #  SB SB
+867 868  #  SB SO
+868 869  #  SO SN
+869 870  #  SN SS
+867 871  #  SB SB
+871 872  #  SB SO
+872 873  #  SO SN
+873 874  #  SN SS
+871 875  #  SB SB
+875 876  #  SB SO
+876 877  #  SO SN
+877 878  #  SN SS
+875 879  #  SB SB
+879 880  #  SB SO
+880 881  #  SO SN
+881 882  #  SN SS
+
+-----------------------------------------------
+Generating bonds between beads
+-----------------------------------------------
+-----------------------------------------------
+Generating angles between subsequent beads
+-----------------------------------------------
+-----------------------------------------------
+Generating coarse grained LAMMPS DATA FILE
+-----------------------------------------------
+
+Parsing lammps data file:  spe8_w850.data
+
+Reading Masses section..
+    1 15.9994
+    2 1.008
+    3 1.008
+    4 12.011
+    5 12.011
+    6 15.9994
+    7 15.9994
+    8 12.011
+    9 1.008
+    10 14.0067
+    11 32.06
+    12 15.9994
+Reading atoms section..
+
+Coarse graining atomistic trajectories..
+Assigning mass to beads..
+-----------------------------------------------
+Generating the new lammps datafile with name o.cg.dat..
+-----------------------------------------------
+SUCCESS!
+-----------------------------------------------
+Generating the new lammps dump with name o.cg.lammpstrj..
+-----------------------------------------------
+12
+16
+20
+24
+28
+32
+36
+40
+-----------------------------------------------
+Testing the production section..
+-----------------------------------------------
+mean, std of bond 1  :  (2.8567742458590213, 0.07281082495291354)
+mean, std of bond 2  :  (4.006520308263324, 0.19300658211254598)
+mean, std of bond 3  :  (5.047262756274478, 0.09922274085884467)
+mean, std of bond 4  :  (3.0800286921444795, 0.18492343033398712)
+mean, std of angle 1 :  (2.2418241769381115, 0.21217331391737138)
+mean, std of angle 2 :  (1.6319556159187438, 0.33134044254915435)
+mean, std of angle 3 :  (1.8541400659729586, 0.3437306124654297)
+mean, std of angle 4 :  (2.1374823239684293, 0.34554619265679537)
