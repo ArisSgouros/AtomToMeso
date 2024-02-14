@@ -129,17 +129,17 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
    mean = np.average(val_all)
    std = np.std(val_all)
 
-   if export_hist:
-      bins=[lbin*ii for ii in range(0, int(max(val_all)/lbin)+1)]
-      nbins = len(bins)-1
-      st = np.histogram(val_all, bins=bins)
-      norm_factor = lbin * np.sum(st[0])
+   bins=[lbin*ii for ii in range(0, int(max(val_all)/lbin)+1)]
+   hist = np.histogram(val_all, bins=bins)
 
+   nbins = len(bins)-1
+   if export_hist:
+      norm_factor = lbin * np.sum(hist[0])
       f = open("o."+fname+".bond_dist.dat","w")
       f.write( " AVE: %16.9f \n" % np.average(val_all))
       f.write( " STD: %16.9f \n" % np.std(val_all))
       for ibin in range(0,nbins):
-         f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin])/norm_factor))
+         f.write( "%16.9f  %16.9f \n" % (hist[1][ibin]+0.5*lbin, float(hist[0][ibin])/norm_factor))
       f.close()
 
    if export_hist_partial:
@@ -158,4 +158,4 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
          f.write( "\n" )
       f.close()
 
-   return mean, std
+   return mean, std, hist
