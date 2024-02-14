@@ -152,7 +152,7 @@ def ComputeAngle(path_data, types, nFrame, path_dump, export_hist=False, export_
       f = open("o."+fname+".angle_dist.dat","w")
       f.write( " AVE: %16.9f \n" % np.average(val_all))
       f.write( " STD: %16.9f \n" % np.std(val_all))
-      for ibin in range(nbins):
+      for ibin in range(0,nbins):
          f.write( "%16.9f  %16.9f \n" % (st[1][ibin]+0.5*lbin, float(st[0][ibin])/norm_factor))
       f.close()
 

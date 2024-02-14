@@ -130,7 +130,7 @@ def ComputeBond(path_data, types, nFrame, path_dump, export_hist=False, export_h
    std = np.std(val_all)
 
    if export_hist:
-      bins=[lbin*ii for ii in range(int(max(val_all)/lbin)+1)]
+      bins=[lbin*ii for ii in range(0, int(max(val_all)/lbin)+1)]
       nbins = len(bins)-1
       st = np.histogram(val_all, bins=bins)
       norm_factor = lbin * np.sum(st[0])
