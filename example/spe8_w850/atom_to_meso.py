@@ -94,11 +94,9 @@ if __name__ == "__main__":
    print("-----------------------------------------------")
    print("Testing the production section..")
    print("-----------------------------------------------")
-   print('mean, std of bond 1  : ', ComputeBond(path_lammps_data_out, [1], n_frame, path_lammps_dump_out))
-   print('mean, std of bond 2  : ', ComputeBond(path_lammps_data_out, [2], n_frame, path_lammps_dump_out))
-   print('mean, std of bond 3  : ', ComputeBond(path_lammps_data_out, [3], n_frame, path_lammps_dump_out))
-   print('mean, std of bond 4  : ', ComputeBond(path_lammps_data_out, [4], n_frame, path_lammps_dump_out))
-   print('mean, std of angle 1 : ', ComputeAngle(path_lammps_data_out, [1], n_frame, path_lammps_dump_out))
-   print('mean, std of angle 2 : ', ComputeAngle(path_lammps_data_out, [2], n_frame, path_lammps_dump_out))
-   print('mean, std of angle 3 : ', ComputeAngle(path_lammps_data_out, [3], n_frame, path_lammps_dump_out))
-   print('mean, std of angle 4 : ', ComputeAngle(path_lammps_data_out, [4], n_frame, path_lammps_dump_out))
+   for ii in [1,2,3,4]:
+      mean, std, hist = ComputeBond(path_lammps_data_out, [ii], n_frame, path_lammps_dump_out)
+      print('mean, std of bond '+str(ii)+'  : ', (mean, std))
+   for ii in [1,2,3,4]:
+      mean, std, hist = ComputeAngle(path_lammps_data_out, [ii], n_frame, path_lammps_dump_out)
+      print('mean, std of angle '+str(ii)+' : ', (mean, std))
