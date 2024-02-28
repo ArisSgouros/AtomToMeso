@@ -216,7 +216,7 @@ def ExportLammpsData(filename, network, bead_bonds, bead_angles, mass_of_bead, n
    f.write('\n')
    f.write('%d atoms\n' % n_beads)
    f.write('%d bonds\n' % len(bead_bonds))
-   f.write('%d angless\n' % len(bead_angles))
+   f.write('%d angles\n' % len(bead_angles))
    f.write('\n')
    f.write('%d atom types\n' % len(mass_of_bead))
    f.write('%d bond types\n' % len(num_of_bond_type))
